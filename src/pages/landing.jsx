@@ -4,6 +4,7 @@ function landing() {
   return (
     <div>
       <h1> Subtle Asian Network</h1>
+      <p> hello! </p>
     </div>
   );
 }
