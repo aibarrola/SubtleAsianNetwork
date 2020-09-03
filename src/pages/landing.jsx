@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
 function landing() {
-  return(
+  return (
     <div>
-      <h1>Hello!</h1>
+      <h1> Subtle Asian Network</h1>
     </div>
-  )
+  );
 }
 
 export default landing;
