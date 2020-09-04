@@ -1,32 +1,90 @@
+.landingSection {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 100px 400px 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
+  margin-top: 20px;
+  margin-right: 20px;
+  display: flex;
+  justify-self: end;
+  float: right;
+  grid-row: 1/2;
+  grid-column: 2/3;
+}
+
 .heroBox {
   color: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  margin-left: 20px;
 }
 
 .btnContainer {
   display: flex;
   justify-content: center;
+  margin-top: 40px;
 }
 
-.BTN {
-  border-radius: 15px;
-  padding: 20px 30px;
-  color: #fff;
-}
 .BTNsignUp {
   border-radius: 15px;
   padding: 20px 30px;
+  width: 200px;
   color: #fff;
-  background-color: #f3869c;
-  opacity: 50%;
+  background-color: #057be8;
+  margin-left: 10px;
+  border: 0px;
+}
+
+.BTNsignUp:hover {
+  background-color: var(--btn-blue-hover);
 }
 
 .BTNlogIn {
   border-radius: 15px;
   padding: 20px 30px;
+  width: 200px;
   color: #fff;
-  background-color: #057be8;
+  border: 0px;
+  margin-left: 10px;
+  opacity: 50%;
+  background-color: #f3869c;
+}
+
+.BTNlogIn:hover {
+  background-color: var(--btn-hover-color);
+}
+
+.introText {
+  margin-top: 15px;
 }
 
 p {
   color: black;
+}
+
+/* svg {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  width: 100px;
+  height: 100px;
+} */
+.mainSVG {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  grid-row: 2/3;
+  grid-column: 2/3;
+  width: 500px;
+  height: 4 50px;
+  margin-left: 100px;
 }

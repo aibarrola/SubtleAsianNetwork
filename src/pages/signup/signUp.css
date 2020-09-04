@@ -42,7 +42,7 @@
 
 .form-label {
   position: relative;
-  top:10px;
+  top: 10px;
   left: 10px;
   background-color: white;
   width: 30%;
@@ -67,7 +67,7 @@
   padding-left: 10px;
   font-size: 1.2rem;
   height: 50px;
-  border: 1px solid #96A3AA;
+  border: 1px solid #96a3aa;
   border-radius: 10px;
 }
 
@@ -92,4 +92,8 @@
 
 .btn-register:hover {
   background-color: var(--btn-hover-color);
+}
+h1 {
+  font-weight: 100;
+  font-size: 50px;
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -6,9 +6,9 @@ import {
   Link,
   Redirect,
 } from "react-router-dom";
-import './App.css';
-import Landing from './pages/landing';
-import SignUp from './pages/signup/signUp';
+import "./App.css";
+import Landing from "./pages/landing";
+import SignUp from "./pages/signup/signUp";
 
 function App() {
   return (

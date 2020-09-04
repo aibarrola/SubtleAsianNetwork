@@ -1,21 +1,26 @@
 /* Google Font "Inter" */
 /* This was the font that was used in the design, we could change it later */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap");
 
 /* Affects all elements of html */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 /* CSS Varibles for color */
 /* Feel free to change the variable names, just message the chat if you do */
 :root {
-  --main-color: #C15F77;
-  --accent-color: #F1607F;
+  --main-color: #c15f77;
+  --accent-color: #f1607f;
   --btn-hover-color: #fa305c;
+
+  --main-blue: #057be8;
+  --btn-blue-hover: #3a8fdf;
 }
 
 .flex-column {
