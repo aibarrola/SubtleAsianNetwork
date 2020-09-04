@@ -86,7 +86,7 @@ p {
   align-items: start;
   grid-row: 2/3;
   grid-column: 2/3;
-  width: 500px;
+  width: 80%;
   height: 4 50px;
   margin-left: 100px;
 }
