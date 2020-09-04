@@ -1,13 +1,24 @@
-body {
+/* Google Font "Inter" */
+/* This was the font that was used in the design, we could change it later */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+
+/* Affects all elements of html */
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Inter', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* CSS Varibles for color */
+/* Feel free to change the variable names, just message the chat if you do */
+:root {
+  --main-color: #C15F77;
+  --accent-color: #F1607F;
+  --btn-hover-color: #fa305c;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
 }
