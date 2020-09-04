@@ -1,0 +1,32 @@
+.heroBox {
+  color: red;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.BTN {
+  border-radius: 15px;
+  padding: 20px 30px;
+  color: #fff;
+}
+.BTNsignUp {
+  border-radius: 15px;
+  padding: 20px 30px;
+  color: #fff;
+  background-color: #f3869c;
+  opacity: 50%;
+}
+
+.BTNlogIn {
+  border-radius: 15px;
+  padding: 20px 30px;
+  color: #fff;
+  background-color: #057be8;
+}
+
+p {
+  color: black;
+}
