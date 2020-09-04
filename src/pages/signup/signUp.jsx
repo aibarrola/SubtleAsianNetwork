@@ -3,9 +3,10 @@ import React from "react";
 function signup() {
   return (
     <div className="signUp">
+
       <form action="" className="signUp-form">
-        <h1 className="signup-form-title">
-          Join the Community
+
+        <h1 className="signup-form-title"> Join the Community </h1>
           <div className="name-input-container">
             <div className="firstName-container">
               <label>Firstname</label>
@@ -32,7 +33,7 @@ function signup() {
           </div>
         </form>
       </div>
-    </div>
+  
   );
 }
 
