@@ -27,6 +27,7 @@ function landing() {
             <button className="BTNlogIn"> Log In </button>
           </div>
         </div>
+
         <img src={mainSVG} className="mainSVG" />
       </div>
       <Connect />
