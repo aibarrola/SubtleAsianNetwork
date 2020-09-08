@@ -1,0 +1,14 @@
+.careerSection {
+  background-color: #f3f3f3;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.careerSVG {
+  height: 70%;
+  width: auto;
+  margin-top: 40px;
+}

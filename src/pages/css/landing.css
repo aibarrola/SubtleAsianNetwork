@@ -1,17 +1,17 @@
 .landingSection {
   height: 100vh;
   display: grid;
-  grid-template-rows: 100px 400px 1fr;
+  margin-left: 20px;
+  margin-right: 20px;
+  grid-template-rows: 25vh 400px 1fr;
   grid-template-columns: 1fr 1fr;
-  margin-left: 5%;
-  margin-right: 5%;
 }
 
 .logo {
   width: 70px;
   height: 70px;
   margin-top: 20px;
-  margin-right: 20px;
+
   display: flex;
   justify-self: end;
   float: right;
@@ -86,7 +86,12 @@ p {
   align-items: start;
   grid-row: 2/3;
   grid-column: 2/3;
-  width: 80%;
+  width: 500px;
   height: 4 50px;
   margin-left: 100px;
+}
+
+h2 {
+  color: var(--main-blue);
+  margin-bottom: 20px;
 }

@@ -1,0 +1,11 @@
+.footer {
+  background-color: #6e7199;
+  height: 200px;
+}
+
+.logoFooter {
+  height: auto;
+  width: 5%;
+  margin-left: 10px;
+  margin-top: 10px;
+}
