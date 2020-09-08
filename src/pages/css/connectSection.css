@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-around;
   flex-direction: row;
-  height: 600px;
+  height: 75vh;
   align-items: center;
 }
 
@@ -19,7 +19,7 @@
   padding-left: 20px;
   padding-right: 20px;
   width: 30%;
-  height: 50%;
+  height: auto;
 }
 
 /* h1 {
