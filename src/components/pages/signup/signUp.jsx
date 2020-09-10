@@ -26,7 +26,7 @@ export default class SignUp extends React.Componenet {
 
     //handle validation here
 
-    
+
     this.setState({[name]: value}) 
   }
   render(){ 
