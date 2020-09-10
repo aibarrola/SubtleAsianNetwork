@@ -1,7 +1,14 @@
 .profileContainer{
     display: grid;
-    grid-template-columns: 100px auto;
+    grid-template-columns: 10% auto;
+}
 
+.sidebar{
+    display: flex;
+    grid-column: 1/2;
+}
 
-    
+.profileMain{
+    display: flex;
+    grid-column: 2/2;
 }
