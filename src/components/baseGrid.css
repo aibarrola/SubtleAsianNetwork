@@ -1,0 +1,14 @@
+.baseContainer{
+    display: grid;
+    grid-template-columns: 10% auto;
+}
+
+.sideContainer{
+    display: flex;
+    grid-column: 1/2;
+}
+
+.mainContainer{
+    display: flex;
+    grid-column: 2/2;
+}
