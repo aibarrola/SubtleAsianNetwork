@@ -7,8 +7,9 @@ import {
   Redirect,
 } from "react-router-dom";
 import "./App.css";
-import Landing from "./pages/landing";
-import SignUp from "./pages/signup/signUp";
+import Landing from "./components/pages/landing";
+import SignUp from "./components/pages/signup/signUp";
+import Profile from "./components/pages/Profile/profile";
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
         </Route>
         <Route path="/signup">
           <SignUp />
+        </Route>
+        <Route path="/profile">
+          <Profile />
         </Route>
       </Switch>
     </Router>

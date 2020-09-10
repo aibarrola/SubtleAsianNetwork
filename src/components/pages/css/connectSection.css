@@ -1,0 +1,33 @@
+.connectSection {
+  background-color: var(--accent-color);
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  height: 75vh;
+  align-items: center;
+}
+
+.connectInfoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 40%;
+}
+
+.connect {
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 30%;
+  height: auto;
+}
+
+/* h1 {
+  margin-bottom: 20px;
+  color: var(--main-blue);
+}
+
+p {
+  width: 600px;
+}
+ */
