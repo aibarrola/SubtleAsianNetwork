@@ -1,0 +1,16 @@
+import React from 'react'
+import './navbar.css'
+
+function Navbar(){
+    return(
+        <section>
+            <div class="navbar">
+                <a href="Network"> Network </a>
+                <a href="Profile"> Profile </a>
+                <a href="Home"> Home </a>
+            </div>
+        </section>
+    )
+}
+
+export default Navbar;
