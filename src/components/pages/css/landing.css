@@ -82,11 +82,11 @@ p {
 .mainSVG {
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-end;
   align-items: start;
   grid-row: 2/3;
   grid-column: 2/3;
-  width: 100%;
+  width: 85%;
   height: auto;
 }
 
