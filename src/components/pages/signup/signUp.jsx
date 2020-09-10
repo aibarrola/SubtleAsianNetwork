@@ -1,14 +1,13 @@
 import React from "react";
 import "./signUp.css";
+import Axios from "axios";
+import { withRouter } from "react-router-dom"
 
 
 
 
 
-
-
-
-export default class SignUp extends React.Componenet {
+class SignUp extends React.Component {
   constructor(props){
     super(props);
     this.state ={
@@ -19,6 +18,24 @@ export default class SignUp extends React.Componenet {
       confirmPassword: null
     }
   }
+  handleSubmit = (event) =>{
+   
+    event.preventDefault();
+    /**if(validation == true){ */
+      const user ={
+        firstName : this.state.firstName,
+        lastName :this.state.lastName,
+        email: this.state.email,
+        password: this.state.password
+      }
+       Axios.post('http://localhost:5000/users/register',user)
+      .then(res=>console.log(res.data))
+      .catch(err=> console.log("Error " +err));
+      /**this.props.history.push('/profile');**/
+      /***}else{
+        //do nothing
+      } ***/ 
+  }
   handleChange = (event) =>{
     event.preventDefault();
     const {name, value} = event.target;//gets the name and vlaue of the specific event 
@@ -27,13 +44,13 @@ export default class SignUp extends React.Componenet {
     //handle validation here
 
 
-    this.setState({[name]: value}) 
+    this.setState({[name]: value}); 
   }
   render(){ 
     return(
     <div className="signUp">
       <div className="signUp-container">
-        <form action="" className="signUp-form">
+        <form action="" className="signUp-form" onSubmit = {this.handleSubmit}>
           <h1 className="signUp-title">Join the Community</h1>
           <div className="signUp-form-fields">
             <div className="signUp-nameFields">
@@ -96,3 +113,4 @@ export default class SignUp extends React.Componenet {
   );
 }
 }
+export default withRouter(SignUp);
