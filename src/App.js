@@ -10,6 +10,8 @@ import "./App.css";
 import Landing from "./components/pages/landing";
 import SignUp from "./components/pages/signup/signUp";
 import Profile from "./components/pages/Profile/profile";
+import CreateProfilePage1 from './components/pages/createProfile/createProfilePage1';
+import CreateProfilePage2 from './components/pages/createProfile/createProfilePage2';
 
 function App() {
   return (
@@ -23,6 +25,12 @@ function App() {
         </Route>
         <Route path="/profile">
           <Profile />
+        </Route>
+        <Route path="/createProfile1">
+          <CreateProfilePage1 />
+        </Route>
+        <Route path="/createProfile2">
+          <CreateProfilePage2 />
         </Route>
       </Switch>
     </Router>

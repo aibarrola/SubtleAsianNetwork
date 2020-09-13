@@ -1,0 +1,112 @@
+.createProfile {
+  height: 100vh;
+  background-image: url(/images/signup/signup-bg.svg);
+  background-size: 70%;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+}
+
+.pink-logo {
+  background-image: url(/images/signup/.pink-logo.svg);
+  height: 5vh;
+  background-size: 100%;
+}
+
+.createProfile-container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.profilePicture {
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 300px;
+  width: 100%;
+  display: flex;
+  margin-top: 5%;
+}
+
+.profilePictureImg {
+  height: 280px;
+  margin: auto;
+  margin: 10px auto;
+}
+
+.createProfile-name-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+
+.createProfile-name {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  color: var(--main-color);
+  text-align: center;
+}
+
+.progressBar {
+  margin: 15px 0;
+}
+
+.createProfile-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.createProfile-form-field {
+  display: inline-flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  margin: 2.5% auto;
+}
+
+.createProfile-form-label {
+  font-size: 1.2rem;
+}
+
+.createProfile-form-input {
+  padding-left: 10px;
+  height: 60px;
+  width: 400px;
+  border-radius: 6px;
+  border: 1px solid var(--gray-border-color);
+  font-size: 1rem;
+}
+
+.createProfile-btn-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.createProfile-textArea {
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid var(--gray-border-color);
+  width: 400px;
+  resize: none;
+}
+
+.btn-continue {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  width: 25%;
+  margin: 30px;
+  padding: 20px 0;
+  border-radius: 18px;
+  transition: ease-in-out 0.3s;
+}
+
+.btn-continue:hover {
+  background-color: var(--btn-hover-color);
+}
