@@ -5,7 +5,7 @@ import connectSVG from "./img/connect.png";
 function render() {
   return (
     <div className="connectSection">
-      <img src={connectSVG} className="connect" />
+      <img src={connectSVG} className="connect" alt=""/>
       <div className="connectInfoContainer">
         <h2> Connect with Others </h2>
         <p>

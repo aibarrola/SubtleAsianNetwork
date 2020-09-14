@@ -11,7 +11,7 @@ function landing() {
   return (
     <div>
       <div className="landingSection">
-        <img src={logo} className="logo" />
+        <img src={logo} className="logo" alt="Logo"/>
         <div className="heroBox">
           <h1>
             Subtle Asian <br></br> Network
@@ -28,7 +28,7 @@ function landing() {
           </div>
         </div>
 
-        <img src={mainSVG} className="mainSVG" />
+        <img src={mainSVG} className="mainSVG" alt=""/>
       </div>
       <Connect />
       <Opportunities />

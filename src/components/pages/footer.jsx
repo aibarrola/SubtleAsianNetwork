@@ -5,7 +5,7 @@ import Logo from "./img/logo.png";
 function render() {
   return (
     <div className="footer">
-      <img src={Logo} className="logoFooter" />
+      <img src={Logo} className="logoFooter" alt=""/>
     </div>
   );
 }

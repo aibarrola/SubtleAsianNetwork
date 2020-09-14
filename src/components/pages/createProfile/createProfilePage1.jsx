@@ -41,7 +41,7 @@ function CreateProfilePage1(props) {
       <div className="createProfile-container">
 
         <div className="profilePicture">
-          <img src="/images/createProfile/profilepic.svg" alt="Profile Picture Default" className="profilePictureImg"/>
+          <img src="/images/createProfile/profilepic.svg" alt="Profile Default" className="profilePictureImg"/>
         </div>
 
         <div className="createProfile-name-container">

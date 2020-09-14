@@ -17,7 +17,7 @@ function render() {
           culpa qui officia deserunt mollit anim id est laborum.
         </p>
       </div>
-      <img src={opportunitiesSVG} className="connect" />
+      <img src={opportunitiesSVG} className="connect" alt=""/>
     </div>
   );
 }
