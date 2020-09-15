@@ -14,6 +14,7 @@ class SignUp extends React.Component {
       firstName: null,
       lastName: null,
       email: null,
+      birthDate: null,
       password: null,
       confirmPassword: null
     }
@@ -26,6 +27,7 @@ class SignUp extends React.Component {
         firstName : this.state.firstName,
         lastName :this.state.lastName,
         email: this.state.email,
+        birthDate: this.state.birthDate,
         password: this.state.password
       }
        Axios.post('http://localhost:5000/users/register',user)
@@ -66,7 +68,7 @@ class SignUp extends React.Component {
 
             <div className="birthday-field">
               <label className="form-label">Birth Date</label>
-              <input type="date" placeholder="1/1/2020" className="field" name = "birthdate"onChange = {this.handleChange}/>
+              <input type="date" placeholder="1/1/2020" className="field" name = "birthDate"onChange = {this.handleChange}/>
             </div>
 
             <div className="email-field">
