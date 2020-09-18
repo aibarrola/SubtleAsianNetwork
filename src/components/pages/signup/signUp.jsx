@@ -77,8 +77,8 @@ class SignUp extends React.Component {
       case "confirmPassword":
         errors.confirmPassword =
           value === this.state.password ? "" : "Passwords do not match";
-
         break;
+        //no default
     }
 
     this.setState({ [name]: value });
