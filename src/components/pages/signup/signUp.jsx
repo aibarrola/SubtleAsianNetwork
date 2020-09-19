@@ -156,16 +156,6 @@ class SignUp extends React.Component {
                 {errors.email.length > 0 && (
                   <span className="error">{errors.email}</span>
                 )}
-                <div className="birthday-field">
-                  <label className="form-label">Birth Date</label>
-                  <input
-                    type="date"
-                    placeholder="1/1/2020"
-                    className="field"
-                    name="birthDate"
-                    onChange={this.handleChange}
-                  />
-                </div>
               </div>
 
               <div className="password-field">

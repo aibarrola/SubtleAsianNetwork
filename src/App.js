@@ -12,6 +12,7 @@ import SignUp from "./components/pages/signup/signUp";
 import Profile from "./components/pages/Profile/profile";
 import CreateProfilePage1 from './components/pages/createProfile/createProfilePage1';
 import CreateProfilePage2 from './components/pages/createProfile/createProfilePage2';
+import LogIn from "./components/pages/login/login";
 
 function App() {
   return (
@@ -22,6 +23,9 @@ function App() {
         </Route>
         <Route path="/signup">
           <SignUp />
+        </Route>
+        <Route path = "/login">
+          <LogIn/>
         </Route>
         <Route path="/profile">
           <Profile />
