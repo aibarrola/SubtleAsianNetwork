@@ -1,12 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
+import {useParams, withRouter} from 'react-router-dom';
 import "./createProfile.css";
+
+// Helpers
+import { getJwt } from "../../Helpers/jwt";
 
 function CreateProfilePage1() {
 
   const [location, setLocation] = useState('');
   const [interests, setInterests] = useState('');
   const [bio, setBio] = useState('');
+  const [token, setToken] = useState();
+
+  let {id} = useParams();
+  let userString = localStorage.getItem('user');
+  let user = JSON.parse(userString);
+
+  useEffect(() => {
+    setToken(getJwt());
+  });
 
   function locationChange(e) {
     setLocation(e.target.value);
@@ -27,11 +40,17 @@ function CreateProfilePage1() {
       bio: bio
     }
 
-    Axios.post('http://localhost:5000/updateProfile/2/:userID', updateOne)
+    const config = {
+      headers : {
+        'x-auth-token': token
+      }
+    }
+
+    Axios.post(`http://localhost:5000/users/${id}/createprofile/2`, updateOne, config)
       .then(res => { 
         console.log(res.data);
       })
-      .catch(err => console.oog("Error: " + err));
+      .catch(err => console.log("Error: " + err));
 
   }
 

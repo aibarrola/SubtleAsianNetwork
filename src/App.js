@@ -10,8 +10,8 @@ import "./App.css";
 import Landing from "./components/pages/landing";
 import SignUp from "./components/pages/signup/signUp";
 import Profile from "./components/pages/Profile/profile";
-import CreateProfilePage1 from './components/pages/createProfile/createProfilePage1';
-import CreateProfilePage2 from './components/pages/createProfile/createProfilePage2';
+import CreateProfilePage1 from './components/pages/createProfile/CreateProfilePage1';
+import CreateProfilePage2 from './components/pages/createProfile/CreateProfilePage2';
 import LogIn from "./components/pages/login/login";
 
 function App() {
@@ -30,10 +30,10 @@ function App() {
         <Route path="/profile">
           <Profile />
         </Route>
-        <Route path="/createProfile1">
+        <Route path="/user/:id/createprofile/1">
           <CreateProfilePage1 />
         </Route>
-        <Route path="/createProfile2">
+        <Route path="/user/:id/createprofile/2">
           <CreateProfilePage2 />
         </Route>
       </Switch>
