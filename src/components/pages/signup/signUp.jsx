@@ -3,10 +3,6 @@ import "./signUp.css";
 import Axios from "axios";
 import { withRouter } from "react-router-dom";
 
-// Create profile pages
-// import CreateProfilePage1 from '../createProfile/CreateProfilePage1';
-// import CreateProfilePage2 from '../createProfile/CreateProfilePage2';
-
 const validEmailRegex = RegExp(
   /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
 );
@@ -137,7 +133,7 @@ class SignUp extends React.Component {
                   <label className="form-label">Birth Date</label>
                   <input
                     type="date"
-                    placeholder="1/1/2020"
+                    placeholder="01/01/2020"
                     className="field"
                     name="birthdate"
                     onChange={this.handleChange}

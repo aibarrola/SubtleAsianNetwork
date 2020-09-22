@@ -50,7 +50,7 @@ function CreateProfilePage1() {
       .then(res => { 
         console.log(res.data);
       })
-      .catch(err => console.log("Error: " + err));
+      .catch(err => console.log("Error: " + err.msg));
 
   }
 
