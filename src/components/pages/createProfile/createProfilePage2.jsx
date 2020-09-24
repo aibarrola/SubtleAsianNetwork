@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
-import {useParams, withRouter} from 'react-router-dom';
+import {useParams} from 'react-router-dom';
 import "./createProfile.css";
 
 // Helpers
@@ -19,7 +19,7 @@ function CreateProfilePage1() {
 
   useEffect(() => {
     setToken(getJwt());
-  });
+  }, []);
 
   function locationChange(e) {
     setLocation(e.target.value);
@@ -64,7 +64,7 @@ function CreateProfilePage1() {
 
         <div className="createProfile-name-container">
           {/* To be changed later to be dynamic */}
-          <h1 className="createProfile-name">John Smith</h1>
+          <h1 className="createProfile-name">{user.firstName} {user.lastName}</h1>
 
           {/* Just the progress bar */}
           <img src="/images/createProfile/ProgressBar2.svg" alt="" className="progressBar"/>

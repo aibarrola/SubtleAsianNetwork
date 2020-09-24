@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Axios from 'axios';
-import {useParams, withRouter} from 'react-router-dom';
+import {useParams} from 'react-router-dom';
 import "./createProfile.css";
 
 // Helpers
@@ -20,7 +20,7 @@ function CreateProfilePage1() {
   
   useEffect(() => {
     setToken(getJwt());
-  });
+  }, []);
 
   function schoolChange(e) {
     setSchool(e.target.value);
@@ -50,7 +50,7 @@ function CreateProfilePage1() {
     Axios.post(`http://localhost:5000/users/${id}/createprofile/1`, updateOne, config)
       .then(res => { 
         console.log(res.data);
-        window.location.assign(`/user/${id}/createprofile/2`);
+        window.location.assign(`/user/${id}/cp/2`);
       })
       .catch(err => console.log("Error: " + err));
 
