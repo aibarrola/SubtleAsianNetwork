@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import "./css/landing.css";
 import Opportunities from "./opportunitiesSection";
 import Connect from "./connectSection.jsx";
@@ -23,8 +24,13 @@ function landing() {
           </p>
 
           <div className="btnContainer">
-            <button className="BTNsignUp"> Sign Up </button>
-            <button className="BTNlogIn"> Log In </button>
+            <Link to="/signup">
+              <button className="BTNsignUp"> Sign Up </button>
+            </Link>
+            
+            <Link to="/login">
+              <button className="BTNlogIn"> Log In </button>
+            </Link>
           </div>
         </div>
 
