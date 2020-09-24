@@ -3,9 +3,21 @@ import "./networking.css";
 import Navbar from "../../navbar";
 import Card from "../Networking/card";
 import Search from "./search";
+import Axios from "axios";
+import {useState} from "react";
+const Networking = (props) => {
 
-const networking = (props) => {
-  var fakeAccessMap = {
+  const[users,setUsers] = useState([]);
+
+
+  Axios.get("http://localhost:5000/users/")
+  .then((response)=>{
+    setUsers(response.data)
+  })
+  .catch((error)=>{
+    console.log(error);
+  })
+  /**var fakeAccessMap = {
     user1: {
       key: "sijaosjoajs",
       firstName: "James Nguyen",
@@ -44,7 +56,7 @@ const networking = (props) => {
     },
   };
 
-
+**/
   return (
     <div>
       <Navbar />
@@ -57,18 +69,12 @@ const networking = (props) => {
         <Card />
         <Card /> */}
 
-        {Object.values(fakeAccessMap).map((el) => (
-          <Card
-            key={el.key}
-            users={el}
-            /* firstName={el.firstName}
-            job={el.job}
-            bio={el.bio} */
-          />
-        ))}
+        {users.map(currentUser=>{
+      return <Card users = {currentUser} key = {currentUser._id} />
+    })}
       </div>
     </div>
   );
 };
 
-export default networking;
+export default Networking;
