@@ -10,8 +10,9 @@ import "./App.css";
 import Landing from "./components/pages/landing";
 import SignUp from "./components/pages/signup/signUp";
 import Profile from "./components/pages/Profile/profile";
-import CreateProfilePage1 from './components/pages/createProfile/createProfilePage1';
-import CreateProfilePage2 from './components/pages/createProfile/createProfilePage2';
+import Networking from "./components/pages/Networking/networking";
+import CreateProfilePage1 from "./components/pages/createProfile/createProfilePage1";
+import CreateProfilePage2 from "./components/pages/createProfile/createProfilePage2";
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
         </Route>
         <Route path="/profile">
           <Profile />
+        </Route>
+        <Route path="/networking">
+          <Networking />
         </Route>
         <Route path="/createProfile1">
           <CreateProfilePage1 />
