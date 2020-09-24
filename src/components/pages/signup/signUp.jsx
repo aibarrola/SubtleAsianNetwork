@@ -41,7 +41,7 @@ class SignUp extends React.Component {
       .then((res) => {
         localStorage.setItem('token', res.data.token);
         localStorage.setItem('user', JSON.stringify(res.data.user));
-        this.props.history.push(`/user/${res.data.user.user_id}/createprofile/1`);
+        this.props.history.push(`/user/${res.data.user.user_id}/cp/1`);
       })
       .catch(err => console.log(err));
     /**this.props.history.push('/profile');**/
