@@ -13,7 +13,24 @@ function profile(){
                     <Sidebar />
                 </div>
                 <div className="mainContainer">
-                    <h1> Profile </h1>
+                    <div className="profileContainer">
+                        <div className="profileMain">
+                            <div className="profileMain header">
+                                <h1> Angelo Ibarrola  </h1>
+                                <h3> Student • Filipino • San Jose  </h3> 
+                            </div>
+                            <div className="profileMain about">
+                                <h2> About </h2>
+                                <h3> Student leader with a love for community-building and web development. Passionate about building valuable products. </h3> 
+                                <h2> Interests </h2>
+                                <h3> Volleyball, leadership, magic </h3>
+                            </div> 
+                            <div className="profileMain network">
+                                <h2> Network </h2>
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

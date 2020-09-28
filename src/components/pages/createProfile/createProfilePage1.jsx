@@ -32,7 +32,7 @@ function CreateProfilePage1(props) {
         console.log(res.data);
         window.location.replace('/createProfile2');
       })
-      .catch(err => console.oog("Error: " + err));
+      .catch(err => console.log("Error: " + err));
 
   }
 
