@@ -1,7 +1,7 @@
 .signUp {
   height: 100vh;
   background-image: url(/images/signup/signup-bg.svg);
-  background-size: 70%;
+  background-size: 90%;
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
@@ -19,14 +19,14 @@
 .signUp-form {
   width: 80%;
   margin: auto;
-  height: 60%;
+  height: 70%;
 }
 
 .signUp-title {
-  font-size:4vw;
+  font-size: 4vw;
   text-align: center;
   font-weight: 600;
- /** font-size: 5rem;**/
+  /** font-size: 5rem;**/
   color: var(--main-color);
 }
 
@@ -72,6 +72,16 @@
   border-radius: 10px;
 }
 
+.field-Error {
+  width: 100%;
+  outline: none;
+  padding-left: 10px;
+  font-size: 1.2rem;
+  height: 50px;
+  border: 1px solid red;
+  border-radius: 10px;
+}
+
 .submit-btn-container {
   width: 100%;
   display: flex;
@@ -97,4 +107,10 @@
 h1 {
   font-weight: 100;
   font-size: 50px;
+}
+
+.error {
+  color: #db2269;
+  font-size: 1em;
+  display: relative;
 }

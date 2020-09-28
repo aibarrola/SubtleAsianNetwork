@@ -1,10 +1,21 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import Axios from 'axios'
 import './profile.css'
 import '../../baseGrid.css'
 import Navbar from '../../navbar'
 import Sidebar from '../../sidebar'
 
-function profile(){
+function Profile(){
+
+    const [user, setUser] = useState();
+
+    useEffect(() => {
+        Axios.get('http://localhost:5000/user/:id')
+            .then(response => {
+                setUser(response.data);
+            })
+    }, [])
+
     return(
         <section>
             <Navbar />
@@ -37,4 +48,4 @@ function profile(){
     )
 }
 
-export default profile;
+export default Profile;

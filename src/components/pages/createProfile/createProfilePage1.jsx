@@ -1,12 +1,26 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Axios from 'axios';
+import {useParams} from 'react-router-dom';
 import "./createProfile.css";
 
-function CreateProfilePage1(props) {
+// Helpers
+import { getJwt } from "../../Helpers/jwt";
+
+function CreateProfilePage1() {
 
   const [school, setSchool] = useState('');
   const [profession, setProfession] = useState('');
   const [ethnicity, setEthnicity] = useState('');
+  const [token, setToken] = useState();
+
+  let {id} = useParams();
+  let userString = localStorage.getItem('user');
+  let user = JSON.parse(userString);
+
+  
+  useEffect(() => {
+    setToken(getJwt());
+  }, []);
 
   function schoolChange(e) {
     setSchool(e.target.value);
@@ -27,10 +41,16 @@ function CreateProfilePage1(props) {
       ethnicity: ethnicity
     }
 
-    Axios.post('http://localhost:5000/updateProfile/1/:userID', updateOne)
+    const config = {
+      headers : {
+        'x-auth-token': token
+      }
+    }
+
+    Axios.post(`http://localhost:5000/users/${id}/createprofile/1`, updateOne, config)
       .then(res => { 
         console.log(res.data);
-        window.location.replace('/createProfile2');
+        window.location.assign(`/user/${id}/cp/2`);
       })
       .catch(err => console.log("Error: " + err));
 
@@ -46,7 +66,7 @@ function CreateProfilePage1(props) {
 
         <div className="createProfile-name-container">
           {/* To be changed later to be dynamic */}
-          <h1 className="createProfile-name">John Smith</h1>
+          <h1 className="createProfile-name">{user.firstName} {user.lastName}</h1>
 
           {/* Just the progress bar */}
           <img src="/images/createProfile/ProgressBar1.svg" alt="" className="progressBar"/>
