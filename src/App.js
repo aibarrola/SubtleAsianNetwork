@@ -34,6 +34,9 @@ function App() {
         <Route path="/user/:id/cp/2">
           <CreateProfilePage2 />
         </Route>
+        <Route path="/user/profile/:id">
+          <Profile />
+        </Route>
       </Switch>
     </Router>
   );
