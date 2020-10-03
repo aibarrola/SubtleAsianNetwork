@@ -4,19 +4,18 @@ import Navbar from "../../navbar";
 import Card from "../Networking/card";
 import Search from "./search";
 import Axios from "axios";
-import {useState} from "react";
+import { useState } from "react";
+
 const Networking = (props) => {
-
-  const[users,setUsers] = useState([]);
-
+  const [users, setUsers] = useState([]);
 
   Axios.get("http://localhost:5000/users/")
-  .then((response)=>{
-    setUsers(response.data)
-  })
-  .catch((error)=>{
-    console.log(error);
-  })
+    .then((response) => {
+      setUsers(response.data);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
   /**var fakeAccessMap = {
     user1: {
       key: "sijaosjoajs",
@@ -69,9 +68,9 @@ const Networking = (props) => {
         <Card />
         <Card /> */}
 
-        {users.map(currentUser=>{
-      return <Card users = {currentUser} key = {currentUser._id} />
-    })}
+        {users.map((currentUser) => {
+          return <Card users={currentUser} key={currentUser._id} />;
+        })}
       </div>
     </div>
   );
