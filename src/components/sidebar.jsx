@@ -3,8 +3,8 @@ import './sidebar.css'
 
 function sidebar(){
     return(
-        <section>
-            <div className="sidebar">
+        <section className="sidebar">
+            <div>
                 <h1> Sidebar </h1>
                 <h2> Community 1</h2> 
                 <h2> Community 2</h2> 

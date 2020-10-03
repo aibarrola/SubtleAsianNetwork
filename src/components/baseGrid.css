@@ -1,11 +1,12 @@
 .baseContainer{
     display: grid;
-    grid-template-columns: 10% auto;
+    grid-template-columns: 200px auto;
 }
 
 .sideContainer{
     display: flex;
     grid-column: 1/2;
+    height: 100%;
 }
 
 .mainContainer{

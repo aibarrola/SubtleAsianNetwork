@@ -29,7 +29,6 @@ function App() {
         <Route path="/networking">
           <Networking />
         </Route>
-        <Route path="/createProfile1"></Route>
         <Route path="/user/:id/cp/1">
           <CreateProfilePage1 />
         </Route>
@@ -38,6 +37,9 @@ function App() {
         </Route>
         <Route path="/editProfile">
           <EditProfile />
+        </Route>
+        <Route path="/user/profile/:id">
+          <Profile />
         </Route>
       </Switch>
     </Router>

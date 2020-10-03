@@ -33,6 +33,19 @@
   background-color: var(--accent-color);
 }
 
+
+.viewProfile {
+  margin-top: 2%;
+  border-radius: 15px;
+  padding: 20px 10px;
+  width: 240px;
+  font-size: 20px;
+  color: #fff;
+  border: 0px;
+  background-color: var(--accent-color);
+}
+
+
 .cardBio {
   margin-top: 30px;
   margin-left: 30px;
