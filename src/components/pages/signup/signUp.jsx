@@ -3,6 +3,11 @@ import "./signUp.css";
 import Axios from "axios";
 import { withRouter } from "react-router-dom";
 
+function validateForm(errors) {
+  let valid = true;
+  Object.values(errors).forEach((val) => val.length > 0 && (valid = false));
+  return valid;
+}
 const validEmailRegex = RegExp(
   /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
 );
@@ -30,7 +35,7 @@ class SignUp extends React.Component {
   }
   handleSubmit = (event) => {
     event.preventDefault();
-    /**if(validation == true){ */
+    if (validateForm(this.state.errors) == true) {
     const user = {
       firstName: this.state.firstName,
       lastName: this.state.lastName,
@@ -51,6 +56,7 @@ class SignUp extends React.Component {
           console.log(err);
         }
       });
+    }
   };
   handleChange = (event) => {
     event.preventDefault();
