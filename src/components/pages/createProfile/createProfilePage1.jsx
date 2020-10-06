@@ -47,7 +47,8 @@ function CreateProfilePage1() {
       }
     }
 
-    Axios.post(`http://localhost:5000/users/${id}/createprofile/1`, updateOne, config)
+    // Axios.post(`http://localhost:5000/users/${id}/createprofile/1`, updateOne, config)
+    Axios.post(`https://san-api.herokuapp.com/users/${id}/createprofile/1`, updateOne, config)
       .then(res => { 
         console.log(res.data);
         window.location.assign(`/user/${id}/cp/2`);

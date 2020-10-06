@@ -37,7 +37,9 @@ class SignUp extends React.Component {
       birthDate: this.state.birthDate,
       password: this.state.password,
     };
-    Axios.post("http://localhost:5000/users/register", user)
+    
+    // Axios.post("http://localhost:5000/users/register", user)
+    Axios.post("https://san-api.herokuapp.com/users/register", user)
       .then((res) => {
         localStorage.setItem('token', res.data.token);
         localStorage.setItem('user', JSON.stringify(res.data.user));
