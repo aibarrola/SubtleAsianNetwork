@@ -50,6 +50,7 @@ function CreateProfilePage1() {
     Axios.post(`https://san-api.herokuapp.com/users/${id}/createprofile/2`, updateOne, config)
       .then(res => { 
         console.log(res.data);
+        window.location.assign(`/user/profile/${id}`);
       })
       .catch(err => console.log("Error: " + err.msg));
 

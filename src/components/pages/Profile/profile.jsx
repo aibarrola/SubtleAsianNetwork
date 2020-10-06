@@ -17,7 +17,7 @@ function Profile(){
 
 
     useEffect(() => {
-        Axios.get(`http://localhost:5000/users/${id}`)
+        Axios.get(`https://san-api.herokuapp.com/users/${id}`)
             .then(response => {
                 console.log(response.data);
                 setUser(response.data);
