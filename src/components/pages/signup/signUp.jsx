@@ -3,6 +3,11 @@ import "./signUp.css";
 import Axios from "axios";
 import { withRouter } from "react-router-dom";
 
+function validateForm(errors) {
+  let valid = true;
+  Object.values(errors).forEach((val) => val.length > 0 && (valid = false));
+  return valid;
+}
 const validEmailRegex = RegExp(
   /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
 );
@@ -17,6 +22,7 @@ class SignUp extends React.Component {
       birthDate: null,
       password: null,
       confirmPassword: null,
+      emailCheckDouble: "",
       errors: {
         firstName: "",
         lastName: "",
@@ -29,7 +35,7 @@ class SignUp extends React.Component {
   }
   handleSubmit = (event) => {
     event.preventDefault();
-    /**if(validation == true){ */
+    if (validateForm(this.state.errors) == true) {
     const user = {
       firstName: this.state.firstName,
       lastName: this.state.lastName,
@@ -45,11 +51,14 @@ class SignUp extends React.Component {
         localStorage.setItem('user', JSON.stringify(res.data.user));
         this.props.history.push(`/user/${res.data.user.user_id}/cp/1`);
       })
-      .catch(err => console.log(err));
-    /**this.props.history.push('/profile');**/
-    /***}else{
-        //do nothing
-      } ***/
+      .catch((err) => {
+        if (err.response.data.msg === "User already exist") {
+          this.setState({ emailCheckDouble: "Email already exists" });
+        } else {
+          console.log(err);
+        }
+      });
+    }
   };
   handleChange = (event) => {
     event.preventDefault();
@@ -75,6 +84,7 @@ class SignUp extends React.Component {
 
         break;
       case "email":
+        this.setState({emailCheckDouble:""})
         errors.email = validEmailRegex.test(value) ? "" : "Email is not valid!";
         break;
       case "password":
@@ -137,7 +147,7 @@ class SignUp extends React.Component {
                     type="date"
                     placeholder="01/01/2020"
                     className="field"
-                    name="birthdate"
+                    name="birthDate"
                     onChange={this.handleChange}
                   />
                   {!Date.parse(this.state.birthdate) && (
@@ -162,6 +172,9 @@ class SignUp extends React.Component {
                   {errors.email.length > 0 && (
                     <span className="error">{errors.email}</span>
                   )}
+                  {this.state.emailCheckDouble.length > 0 && (
+                  <span className="error">{this.state.emailCheckDouble}</span>
+                )}
                 </div>
 
                 <div className="password-field">

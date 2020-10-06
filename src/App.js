@@ -8,6 +8,7 @@ import CreateProfilePage1 from "./components/pages/createProfile/CreateProfilePa
 import Networking from "./components/pages/Networking/networking";
 import CreateProfilePage2 from "./components/pages/createProfile/CreateProfilePage2";
 import LogIn from "./components/pages/login/login";
+import EditProfile from "./components/pages/editProfile/editProfile";
 
 function App() {
   return (
@@ -33,6 +34,12 @@ function App() {
         </Route>
         <Route path="/user/:id/cp/2">
           <CreateProfilePage2 />
+        </Route>
+        <Route path="/editProfile">
+          <EditProfile />
+        </Route>
+        <Route path="/user/profile/:id">
+          <Profile />
         </Route>
       </Switch>
     </Router>
