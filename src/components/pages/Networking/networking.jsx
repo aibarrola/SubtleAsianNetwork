@@ -9,7 +9,8 @@ import { useState } from "react";
 const Networking = (props) => {
   const [users, setUsers] = useState([]);
 
-  Axios.get("http://localhost:5000/users/")
+  //Axios.get("http://localhost:5000/users/")
+  Axios.get("https://san-api.herokuapp.com/users")
     .then((response) => {
       setUsers(response.data);
     })

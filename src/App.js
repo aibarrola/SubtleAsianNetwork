@@ -4,9 +4,9 @@ import "./App.css";
 import Landing from "./components/pages/landing";
 import SignUp from "./components/pages/signup/signUp";
 import Profile from "./components/pages/Profile/profile";
-import CreateProfilePage1 from "./components/pages/createProfile/CreateProfilePage1";
+import CreateProfilePage1 from "./components/pages/createProfile/createProfilePage1";
 import Networking from "./components/pages/Networking/networking";
-import CreateProfilePage2 from "./components/pages/createProfile/CreateProfilePage2";
+import CreateProfilePage2 from "./components/pages/createProfile/createProfilePage2";
 import LogIn from "./components/pages/login/login";
 import EditProfile from "./components/pages/editProfile/editProfile";
 
