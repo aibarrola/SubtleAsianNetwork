@@ -9,6 +9,7 @@ import Networking from "./components/pages/Networking/networking";
 import CreateProfilePage2 from "./components/pages/createProfile/createProfilePage2";
 import LogIn from "./components/pages/login/login";
 import EditProfile from "./components/pages/editProfile/editProfile";
+import GroupPage from "./components/pages/groupPage/groupPage";
 
 function App() {
   return (
@@ -40,6 +41,9 @@ function App() {
         </Route>
         <Route path="/user/profile/:id">
           <Profile />
+        </Route>
+        <Route path="/group">
+          <GroupPage />
         </Route>
       </Switch>
     </Router>

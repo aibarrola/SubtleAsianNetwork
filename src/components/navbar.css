@@ -1,17 +1,17 @@
-.navbar{
-    background-color: var(--accent-color);
-    overflow: hidden;
+.navbar {
+  background-color: #69b0f1;
+  overflow: hidden;
 }
 
 .navbar a {
-    float: right;
-    color: var(--main-blue);
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
+  float: right;
+  color: var(--main-blue);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
 
-  .navbar a:hover{
-      background-color: white;
-  }
+.navbar a:hover {
+  background-color: white;
+}

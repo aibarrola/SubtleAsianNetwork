@@ -1,62 +1,60 @@
-.profileContainer{
-    display: grid;
-    /* grid-template-columns: auto 600px auto; */
-
+.baseContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-.profileMain{
-    display: flex;
-    grid-column: 2/3;
-    text-align: center;
-    justify-items: center;
-    flex-direction: column;
-    background-color: white;
+.profileContainer {
+  /* grid-template-columns: auto 600px auto; */
 }
 
-.profileMain.header{
-    margin-top: 10px;
-    background-color: var(--accent-color);
-    padding: 10px 0px;
+.profileMain {
+  display: flex;
+  text-align: center;
+  justify-items: center;
+  flex-direction: column;
+  background-color: white;
 }
 
-.header h2{
-    color: var(--main-blue);
-    font-weight: 300;
-}
-.header h3{
-    font-weight: 200;
+.profileMain.header {
+  margin-top: 10px;
+  background-color: var(--accent-color);
+  padding: 10px 0px;
 }
 
-
-.profileMain.about{
-    background-color: var(--accent-color);
-    margin-top: 10px;
-    padding: 10px 0px;
-
+.header h2 {
+  color: var(--main-blue);
+  font-weight: 300;
+}
+.header h3 {
+  font-weight: 200;
 }
 
-.about h2{
-    color: black;
-    font-weight: 400;
-    text-align: center;
-    margin-bottom: 10px;
+.profileMain.about {
+  background-color: var(--accent-color);
+  margin-top: 10px;
+  padding: 10px 0px;
 }
 
-.about h3{
-    font-weight: 200;
-    text-align: center;
-    margin-bottom: 20px;
+.about h2 {
+  color: black;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
-
-.profileMain.network{
-    background-color: var(--accent-color);
-    margin-top: 10px;
-    padding: 10px 0px;
+.about h3 {
+  font-weight: 200;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.network h2{
-    color: black;
-    font-weight: 400;
+.profileMain.network {
+  background-color: var(--accent-color);
+  margin-top: 10px;
+  padding: 10px 0px;
 }
 
+.network h2 {
+  color: black;
+  font-weight: 400;
+}
