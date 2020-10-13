@@ -1,0 +1,64 @@
+.tasksContainer {
+  display: flex;
+  flex-direction: column;
+
+  height: 700px;
+  width: 25%;
+}
+
+.todoContainer {
+  display: flex;
+  background-color: var(--primary-border-color);
+
+  padding-top: 20px;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.toDoNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.taskHeader {
+  font-size: 26px;
+  font-weight: bold;
+  left: 0;
+  top: 0;
+}
+
+.switchTabs {
+  margin-left: 20px;
+  color: #000000;
+  opacity: 54%;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.switchTabs.active {
+  margin-left: 20px;
+  color: red;
+  opacity: 54%;
+  text-decoration: underline;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.addTask {
+  color: white;
+  background-color: #ff7575;
+
+  font-size: 35px;
+  width: 95%;
+  border: 0px;
+  border-radius: 6px;
+  height: 80px;
+}
+.addTask::placeholder {
+  color: white;
+  font-weight: bold;
+}

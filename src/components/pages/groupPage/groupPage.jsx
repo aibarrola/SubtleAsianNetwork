@@ -1,5 +1,6 @@
 import React from "react";
 import "./groupPage.css";
+import GroupToDo from "../groupPage/groupToDo";
 import Navbar from "../../navbar";
 
 const editProfile = (props) => {
@@ -52,9 +53,8 @@ const editProfile = (props) => {
         <div className="announcements">
           <h3> Announcements </h3>
         </div>
-        <div className="tasks">
-          <h3> Tasks </h3>
-        </div>
+        <GroupToDo />
+
         <div className="questionsAnswers">
           <h3> Questions </h3>
         </div>
