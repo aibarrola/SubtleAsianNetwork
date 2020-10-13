@@ -128,14 +128,33 @@
   border-radius: 20px;
 }
 
-/* .taskHeader {
-  grid-column: 2/3;
-  width: 100%;
-} */
-
 .questionsAnswers {
   justify-content: center;
   width: 25%;
   background-color: var(--primary-border-color);
   border-radius: 20px;
+}
+
+.taskHeader {
+  font-size: 26px;
+  font-weight: bold;
+  left: 0;
+  top: 0;
+}
+
+.switchTabs {
+  margin-left: 20px;
+  color: #000000;
+  opacity: 54%;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.switchTabs.active {
+  margin-left: 20px;
+  color: red;
+  opacity: 54%;
+  text-decoration: underline;
+  font-size: 17px;
+  font-weight: bold;
 }

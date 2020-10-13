@@ -1,4 +1,5 @@
 import React from "react";
+import "./groupPage.css";
 import "./groupToDo.css";
 
 const tasks = (props) => {
@@ -14,6 +15,32 @@ const tasks = (props) => {
       </div>
       <div className="todoContainer">
         <input className="addTask" placeholder="Add a task" />
+        <div className="taskList">
+          <div className="taskLi">
+            <div className="toDoCheckBox">
+              <div className="checkCircle"></div>
+            </div>
+
+            <small className="taskName"> Develope Front End </small>
+            <small className="taskDate"> Due March 2nd </small>
+          </div>
+          <div className="taskLi">
+            <div className="toDoCheckBox">
+              <div className="checkCircle"></div>
+            </div>
+
+            <small className="taskName"> Fix backend </small>
+            <small className="taskDate"> Due March 2nd </small>
+          </div>
+          <div className="taskLi">
+            <div className="toDoCheckBox">
+              <div className="checkCircle active"></div>
+            </div>
+
+            <small className="taskName"> Read messages </small>
+            <small className="taskDate"> Due March 2nd </small>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -24,30 +24,6 @@
   margin-bottom: 15px;
 }
 
-.taskHeader {
-  font-size: 26px;
-  font-weight: bold;
-  left: 0;
-  top: 0;
-}
-
-.switchTabs {
-  margin-left: 20px;
-  color: #000000;
-  opacity: 54%;
-  font-size: 15px;
-  font-weight: bold;
-}
-
-.switchTabs.active {
-  margin-left: 20px;
-  color: red;
-  opacity: 54%;
-  text-decoration: underline;
-  font-size: 17px;
-  font-weight: bold;
-}
-
 .addTask {
   color: white;
   background-color: #ff7575;
@@ -61,4 +37,56 @@
 .addTask::placeholder {
   color: white;
   font-weight: bold;
+}
+
+.taskList {
+  width: 95%;
+  margin-top: 20px;
+}
+
+.taskName {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  font-weight: bold;
+  font-size: 17px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.taskDate {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  margin-left: 20px;
+}
+
+.taskLi {
+  display: grid;
+  grid-template-columns: 15% 70% 15%;
+  grid-template-rows: 30px 40px;
+  background-color: #d8d8d8;
+  width: 100%;
+  height: 70px;
+  margin-bottom: 15px;
+}
+
+.toDoCheckBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 1/2;
+  grid-row: 1/3;
+  background-color: #c4c4c4;
+  height: 100%;
+  width: 100%;
+}
+
+.checkCircle {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  background-color: var(--main-blue);
+}
+
+.checkCircle.active {
+  background-color: var(--accent-color);
 }
