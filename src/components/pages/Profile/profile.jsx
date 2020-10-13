@@ -52,8 +52,6 @@ function Profile() {
             </div>
           </div>
         </div>
-        <div className="backTest">hi</div>
-        <div className="backtest2">hello</div>
       </div>
     </section>
   );
