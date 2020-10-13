@@ -5,9 +5,10 @@ function Navbar(){
     return(
         <section>
             <div class="navbar">
-                <a href="Network"> Network </a>
+                <a href="/networking"> Network </a>
+                <a href="/group"> Groups </a>
                 <a href="Profile"> Profile </a>
-                <a href="Home"> Home </a>
+                {/* <a href="Home"> Home </a> */}
             </div>
         </section>
     )

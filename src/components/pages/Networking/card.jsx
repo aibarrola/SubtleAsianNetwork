@@ -13,14 +13,13 @@ const card = (props) => {
   return (
     <div>
       <div className="card shadow">
-        <h2 className="cardName"> {props.users.firstName}</h2>
+        <h2 className="cardName"> {props.users.firstName} {props.users.lastName} </h2>
 
         <div className="profilePic"></div>
         <h3 className="jobTitle"> {props.users.profession} </h3>
         <p className="cardBio">{props.users.bio}</p>
-        <button className="addFriend"> Add Friend </button>
-
-        <button className="viewProfile" onClick={handleChange}> Profile </button>
+        {/* <button className="addFriend"> Add Friend </button> */}
+        <button className="viewProfile" onClick={handleChange}> View Profile </button>
         
       </div>
     </div>

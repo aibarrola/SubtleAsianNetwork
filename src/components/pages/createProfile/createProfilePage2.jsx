@@ -75,18 +75,18 @@ function CreateProfilePage1() {
         <form className="createProfile-form" onSubmit={handleSubmit}>
           <div className="createProfile-form-field">
             <label className="createProfile-form-label">Location:</label>
-            <input type="text" placeholder="E.g. San Jose State University" className="createProfile-form-input" value={location} onChange={locationChange}/>
+            <input type="text" placeholder="E.g. San Jose, San Francisco" className="createProfile-form-input" value={location} onChange={locationChange}/>
           </div>
 
           <div className="createProfile-form-field">
             <label className="createProfile-form-label">Interest:</label>
-            <input type="text" placeholder="E.g. Student, Software Engineer" className="createProfile-form-input" value={interests} onChange={interestsChange}/>
+            <input type="text" placeholder="E.g. Working out, watching anime, playing sports" className="createProfile-form-input" value={interests} onChange={interestsChange}/>
           </div>
 
           <div className="createProfile-form-field">
             <label className="createProfile-form-label">Bio:</label>
             <textarea 
-              placeholder="Separate interests with a comma. E.g. STONKS, money, love" className="createProfile-textArea" value={bio} onChange={bioChange}></textarea>
+              placeholder="Tell me about yourself!" className="createProfile-textArea" value={bio} onChange={bioChange}></textarea>
           </div>
 
           <div className="createProfile-btn-container"> 
