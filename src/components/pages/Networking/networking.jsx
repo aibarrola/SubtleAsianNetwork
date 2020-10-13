@@ -60,14 +60,10 @@ const Networking = (props) => {
   return (
     <div>
       <Navbar />
-      <Search />
+      {/* <Search /> */}
+      <h1>Networking </h1> 
 
       <div className="cardContainer">
-        {/*  <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card /> */}
 
         {users.map((currentUser) => {
           return <Card users={currentUser} key={currentUser._id} />;
