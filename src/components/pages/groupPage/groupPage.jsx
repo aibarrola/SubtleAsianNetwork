@@ -4,20 +4,18 @@ import GroupToDo from "../groupPage/groupToDo";
 import Announcments from "../groupPage/announcements";
 import Navbar from "../../navbar";
 import GroupHeader from "./groupHeader";
+import QnA from "./qna";
 
 const editProfile = (props) => {
   return (
     <section className="groupPageContainer">
-       <Navbar />
+      <Navbar />
       <GroupHeader />
 
       <div className="listContainer">
         <Announcments />
         <GroupToDo />
-
-        <div className="questionsAnswers">
-          <h3> Questions </h3>
-        </div>
+        <QnA />
       </div>
     </section>
   );

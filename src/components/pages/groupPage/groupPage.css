@@ -110,13 +110,13 @@
   justify-content: space-around;
 }
 
-.announcements {
+/* .announcements {
   display: flex;
   width: 40%;
   justify-content: center;
   background-color: var(--primary-border-color);
   border-radius: 20px;
-}
+} */
 
 .tasks {
   padding-top: 20px;
@@ -157,4 +157,16 @@
   text-decoration: underline;
   font-size: 17px;
   font-weight: bold;
+}
+
+.switchTabs:hover {
+  color: red;
+  opacity: 54%;
+}
+
+.listNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 15px;
 }
