@@ -5,9 +5,14 @@
 }
 
 .header {
+  margin-top: 1%;
   height: 10%;
   width: 100%;
   text-align: center;
+}
+
+.headerInfo{
+  font-weight: 400;
 }
 
 .sideProfile {
@@ -29,4 +34,24 @@
   grid-template-columns: 1fr 3fr;
   margin-left: 5%;
   margin-right: 5%;
+}
+
+.sideHeader{
+  margin-bottom: 5px;
+  font-weight: 200;
+}
+
+.sideInfo{
+  font-weight: 400;
+  margin-bottom: 10px
+}
+
+.mainHeader{
+  margin-bottom: 5px;
+  font-weight: 200;
+}
+
+.mainInfo{
+  font-weight: 400;
+  margin-bottom: 10px;
 }
