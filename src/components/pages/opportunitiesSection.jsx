@@ -6,15 +6,9 @@ function render() {
   return (
     <div className="opportunitiesSection">
       <div className="connectInfoContainer">
-        <h2> Find opportunities </h2>
+        <h2> Track Progress </h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+          You will be able to edit and customize your own team page. This inludes the team name, description, and more! This will be your main hub for sending out announcements, asking questions, and a task list. All customized for you to make it as easy as possible to create an efficient workflow for your project!
         </p>
       </div>
       <img src={opportunitiesSVG} className="connect" alt=""/>

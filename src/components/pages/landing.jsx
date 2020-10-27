@@ -15,12 +15,11 @@ function landing() {
         <img src={logo} className="logo" alt="Logo"/>
         <div className="heroBox">
           <h1>
-            Subtle Asian <br></br> Network
+            Subtle Asian Network <br />
+            Kickstarter Program
           </h1>
           <p className="introText">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim "
+            Welcome members of the Kickstarter Program! Here, you can find others in the kickstarter program and use this website to keep track of your progress within your team. 
           </p>
 
           <div className="btnContainer">
