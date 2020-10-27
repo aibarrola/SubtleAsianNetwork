@@ -7,7 +7,7 @@ function Navbar(){
             <div class="navbar">
                 <a href="/networking"> Network </a>
                 <a href="/group"> Groups </a>
-                <a href="Profile"> Profile </a>
+                {/* <a href="Profile"> Profile </a> */}
                 {/* <a href="Home"> Home </a> */}
             </div>
         </section>
