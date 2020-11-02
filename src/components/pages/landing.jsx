@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { Link, useHistory } from 'react-router-dom';
 import "./css/landing.css";
 import Opportunities from "./opportunitiesSection";
 import Connect from "./connectSection.jsx";
@@ -8,7 +8,29 @@ import Footer from "./footer.jsx";
 import logo from "./img/logo.png";
 import mainSVG from "./img/landingMain.png";
 
-function landing() {
+import { getJwt } from '../Helpers/jwt';
+
+function Landing() {
+
+  const [redirect, setRedirect] = useState(false);
+  const [user, setUser] = useState();
+  const [token, setToken] = useState();
+
+  let history = useHistory();
+
+  useEffect(() => {
+    let retreived = localStorage.getItem('user');
+    retreived = JSON.parse(retreived);
+    setUser(retreived.user_id);
+    setToken(getJwt());
+    setRedirect(true);
+  }, [])
+
+  if (redirect) {
+    history.push(`/user/profile/${user}`);
+    setRedirect(false);
+  }
+
   return (
     <div>
       <div className="landingSection">
@@ -43,4 +65,4 @@ function landing() {
   );
 }
 
-export default landing;
+export default Landing;
