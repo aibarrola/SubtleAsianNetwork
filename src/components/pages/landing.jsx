@@ -19,11 +19,13 @@ function Landing() {
   let history = useHistory();
 
   useEffect(() => {
-    let retreived = localStorage.getItem('user');
-    retreived = JSON.parse(retreived);
-    setUser(retreived.user_id);
-    setToken(getJwt());
-    setRedirect(true);
+    if (localStorage.getItem('user') && localStorage.getItem('token') ) {
+      let retreived = localStorage.getItem('user');
+      retreived = JSON.parse(retreived);
+      setUser(retreived.user_id);
+      setToken(getJwt());
+      setRedirect(true);
+    }
   }, [])
 
   if (redirect) {
