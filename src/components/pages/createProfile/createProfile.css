@@ -1,9 +1,10 @@
 .createProfile {
-  height: 100vh;
+  height: 100%;
   background-image: url(/images/signup/signup-bg.svg);
   background-size: 90%;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   display: flex;
 }
 
