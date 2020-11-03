@@ -8,6 +8,7 @@ const LOCAL_STORAGE_KEY = "react-todo-list-todos";
 
 function GroupToDo() {
   const [todos, setTodos] = useState([]);
+  const [questions, setQuestions] = useState([]);
   const [filter, setFilter] = useState("all");
 
   useEffect(() => {
@@ -28,6 +29,7 @@ function GroupToDo() {
     setTodos([todo, ...todos]);
   }
 
+  // Switches completetion state to completed or not completed
   function toggleComplete(id) {
     setTodos(
       todos.map((todo) => {
@@ -42,10 +44,12 @@ function GroupToDo() {
     );
   }
 
+  //Remove todo from list
   function removeToDo(id) {
     setTodos(todos.filter((todo) => todo.id !== id));
   }
 
+  //Changes the filter state
   function changeFilter(filter) {
     setFilter(filter);
   }

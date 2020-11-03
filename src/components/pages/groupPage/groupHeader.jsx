@@ -1,12 +1,11 @@
 import React from "react";
 import "./groupPage.css";
-
-const groupHeader = (props) => {
+function GroupHeader({ showPopUp, groupSetting }) {
   return (
     <section className="groupPageContainer">
       <div className="groupHeader">
         <div className="groupPic "> Avatar </div>
-        <h1 className="groupName"> Group Name</h1>
+        <h1 className="groupName"> {groupSetting.groupName}</h1>
 
         <div className="memberAvatarsContainer">
           <img
@@ -37,17 +36,24 @@ const groupHeader = (props) => {
           <span className="moreUsers">...</span>
         </div>
         <div className="groupButtonContainer">
-          <button className="editGroup"> Edit Group </button>
+          <button className="editGroup" onClick={showPopUp}>
+            {" "}
+            Edit Group{" "}
+          </button>
           <button className="actionBTN"> Action </button>
         </div>
         <div className="countDownContainer">55: 13 : 00</div>
         <div className="progressBar">
-          <div className="loadingProgress"> 30% </div>
+          <div
+            className="loadingProgress"
+            style={{ width: `${groupSetting.projectPercent}%` }}
+          >
+            {groupSetting.projectPercent}%
+          </div>
         </div>
       </div>
-
     </section>
   );
-};
+}
 
-export default groupHeader;
+export default GroupHeader;

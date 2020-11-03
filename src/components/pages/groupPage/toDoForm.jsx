@@ -2,28 +2,39 @@ import React, { useEffect, useState } from "react";
 import "./groupPage.css";
 import "./groupToDo.css";
 
-//import ToDoContainer from "../groupPage/toDoContainer";
-
-function ToDoForm({ addToDo, to }) {
+function ToDoForm({ addToDo }) {
   const [todo, setTodo] = useState({
     id: "",
     taskName: "",
     completed: false,
   });
 
+  //Grabs the current input value and sets it to state
   function handleTasksInputChange(e) {
     setTodo({ ...todo, taskName: e.target.value });
   }
 
-  function handleSubmit(e) {
+  //Submit todo and adds it to the todo array
+  /*  function handleSubmit(e) {
     e.preventDefault();
     if (todo.taskName.trim()) {
       addToDo({ ...todo, id: generateRanId(11) });
       // reset taks input
       setTodo({ ...todo, taskName: "" });
     }
+  } */
+
+  function handleSubmit(array, e) {
+    e.preventDefault();
+    console.log(e);
+    if (array.taskName.trim()) {
+      addToDo({ ...array, id: generateRanId(11) });
+      // reset taks input
+      setTodo({ ...array, taskName: "" });
+    }
   }
 
+  //Generate a random id depending on the length
   function generateRanId(length) {
     var result = "";
     var characters =
@@ -36,7 +47,7 @@ function ToDoForm({ addToDo, to }) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="formToDo">
+    <form onSubmit={(e) => handleSubmit(todo, e)} className="formToDo">
       <input
         className="addTask"
         value={todo.taskName}

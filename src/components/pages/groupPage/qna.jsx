@@ -1,6 +1,8 @@
 import React from "react";
 import "./groupPage.css";
 import "./qna.css";
+import QnaCardContainer from "../groupPage/qnaCard.jsx";
+import QnaForm from "../groupPage/qnaForm.jsx";
 
 const qma = (props) => {
   return (
@@ -14,21 +16,8 @@ const qma = (props) => {
         </div>
       </div>
       <div className="QnA">
-        <input className="addTask" placeholder="Ask a question" />
-        <div className="questionCard shadow">
-          <div>
-            <img
-              src="/images/createProfile/profilepic.svg"
-              alt="Profile Default"
-              className="profileCircle"
-            />
-            <small className=""> Josh Bark </small>
-            <small> posted 2 days ago </small>
-          </div>
-
-          <p> How is the front-end connected? </p>
-          <button className="answerBTN"> Answer </button>
-        </div>
+        <QnaForm />
+        <QnaCardContainer />
       </div>
     </div>
   );
