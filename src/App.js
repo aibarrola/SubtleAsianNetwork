@@ -39,7 +39,7 @@ function App() {
         <Route path="/user/profile/:id">
           <Profile />
         </Route>
-        <Route path="/group">
+        <Route path="/group/:id">
           <GroupPage />
         </Route>
       </Switch>

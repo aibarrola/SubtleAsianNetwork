@@ -4,14 +4,10 @@
 }
 
 .groupHeader {
-  display: grid;
   padding: 3%;
-  row-gap: 10px;
-  grid-template-columns: 15% 55% 1fr;
-  grid-template-rows: 60px 60px 50px;
-  background-color: var(--secondary-blue);
-
-  height: 350px;
+  background-color: #E6E6E6;
+  height: auto;
+  width: 100%;
 }
 
 .groupPic {

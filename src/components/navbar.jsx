@@ -12,12 +12,13 @@ function Navbar(){
     let retrieved = localStorage.getItem('user');
     retrieved = JSON.parse(retrieved);
 
-    const [user, setUser] = useState(retrieved.user_id);
+    const [user, setUser] = useState(retrieved);
 
     let history = useHistory();
 
     useEffect(() => {
         setToken(getJwt());
+        console.log(user);
     }, [])
 
     function logout() {
@@ -28,8 +29,8 @@ function Navbar(){
         <section>
             <div class="navbar">
                 <a href="/networking"> Network </a>
-                <a href="/group"> Groups </a>
-                <a href={`/user/profile/${user}`}> My Profile </a>
+                <a href={`/group/${user.group}`}> Groups </a>
+                <a href={`/user/profile/${user.user_id}`}> My Profile </a>
                 <a href="/" onClick={logout}>Logout</a>
                 {/* <a href="Home"> Home </a> */}
             </div>

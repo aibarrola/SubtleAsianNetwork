@@ -34,7 +34,9 @@ function Profile() {
             <h2 className="sideHeader"> About </h2>
             <h3 className="sideInfo"> {user.bio} </h3> 
             <h2 className="sideHeader"> Interests </h2>
-            <h3 className="sideInfo"> {user.interests} </h3>  
+            <h3 className="sideInfo"> {user.interests} </h3> 
+            <h2 className="sideHeader"> Team </h2>
+            <h3 className="sideInfo"> {user.group} </h3>
         </div>
 
 
