@@ -24,23 +24,25 @@ function Profile() {
       <Navbar />
       <div className="header">
           <h1> {user.firstName} {user.lastName} </h1> 
-          <h2> {user.profession} • {user.school} • {user.ethnicity} </h2>
+          <h2 className="headerInfo"> {user.profession} • {user.school} • {user.ethnicity} </h2>
       </div>
 
       <hr className="line" /> 
       <div className="profileContainer">
 
         <div className="sideProfile">
-            <h2> About </h2>
-            <h3> {user.bio} </h3> 
-            <h2> Interests </h2>
-            <h3> {user.interests} </h3>  
+            <h2 className="sideHeader"> About </h2>
+            <h3 className="sideInfo"> {user.bio} </h3> 
+            <h2 className="sideHeader"> Interests </h2>
+            <h3 className="sideInfo"> {user.interests} </h3> 
+            <h2 className="sideHeader"> Team </h2>
+            <h3 className="sideInfo"> {user.group} </h3>
         </div>
 
 
         <div className="mainProfile"> 
-            <h2>Recent Activity</h2>
-            <h3> No activity here... </h3>
+            <h2 className="mainHeader">Recent Activity</h2>
+            <h3 className="mainInfo"> No activity here... </h3>
         </div>
         
 

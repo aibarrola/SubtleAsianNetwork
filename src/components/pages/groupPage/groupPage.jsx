@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+
 import "./groupPage.css";
 import GroupToDo from "../groupPage/groupToDo";
 import Announcments from "../groupPage/announcements";
@@ -7,15 +9,13 @@ import GroupHeader from "./groupHeader";
 import QnA from "./qna";
 import Sidebar from "./sideBar/SideBar.jsx";
 
-import { useState } from "react";
-
 function Grouppage() {
   //make this into one UseState when not half asleep
   const [groupSetting, settingChange] = useState({
     groupName: "Group Names",
     gitHub: "",
     projectPercent: 10,
-    description: "",
+    description: "This is the web dev Team",
   });
   /*   const [popUpForm, setPopUpForm] = useState({
     groupName: "Group Names",

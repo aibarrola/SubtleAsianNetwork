@@ -21,7 +21,7 @@
   display: grid;
   position: fixed;
   /* background-color: #69b0f1; */
-  background-color: #11101c;
+  background-color: #11101cf5;
 
   top: 0;
   left: 0;
@@ -58,7 +58,7 @@
   flex-direction: row;
   justify-content: start;
   padding: 20px;
-  background-color: #11101c;
+  background-color: #11101cea;
   color: white;
   margin-top: 10px;
 }
