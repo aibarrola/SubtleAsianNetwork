@@ -5,7 +5,7 @@ import CareerSVG from "./img/career.png";
 function render() {
   return (
     <div className="careerSection">
-      <h2> Start your Career </h2>
+      <h2 className="mainSectionHeader"> Start your Career </h2>
       <img src={CareerSVG} className="careerSVG" alt=""/>
     </div>
   );
