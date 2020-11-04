@@ -23,8 +23,6 @@ function Navbar(){
         setUser(response.data);
         setGroup(response.data.group);
         });
-       
-      
     }, [])
 
     function logout() {
@@ -34,10 +32,10 @@ function Navbar(){
     return(
         <section>
             <div class="navbar">
+                <a href="/" onClick={logout}>Logout</a>
                 <a href="/networking"> Network </a>
                 <a href={`/group/${group}`}> Groups </a>
-                <a href={`/user/profile/${user.id}`}> My Profile </a>
-                <a href="/" onClick={logout}>Logout</a>
+                <a href={`/user/profile/${retrieved.user_id}`}> My Profile </a>
                 {/* <a href="Home"> Home </a> */}
             </div>
         </section>

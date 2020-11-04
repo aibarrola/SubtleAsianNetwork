@@ -12,6 +12,7 @@ function CreateProfilePage1() {
   const [profession, setProfession] = useState('');
   const [ethnicity, setEthnicity] = useState('');
   const [token, setToken] = useState();
+  const [error, setError] = useState("");
 
   let {id} = useParams();
   let userString = localStorage.getItem('user');
@@ -75,17 +76,17 @@ function CreateProfilePage1() {
 
         <form className="createProfile-form" onSubmit={handleSubmit}>
           <div className="createProfile-form-field">
-            <label className="createProfile-form-label">School:</label>
+            <label className="createProfile-form-label">School</label>
             <input type="text" placeholder="E.g. San Jose State University" className="createProfile-form-input" value={school} onChange={schoolChange} required/>
           </div>
 
           <div className="createProfile-form-field">
-            <label className="createProfile-form-label">Profession:</label>
-            <input type="text" placeholder="E.g. Student, Software Engineer" className="createProfile-form-input" value={profession} onChange={professionChange} required/>
+            <label className="createProfile-form-label">Profession</label>
+            <input type="text" placeholder="E.g. Computer Engineering Student, Software Engineer Intern" className="createProfile-form-input" value={profession} onChange={professionChange} required/>
           </div>
 
           <div className="createProfile-form-field">
-            <label className="createProfile-form-label">Ethnicity:</label>
+            <label className="createProfile-form-label">Ethnicity</label>
             <input type="text" placeholder="E.g. Vietnamese" className="createProfile-form-input" value={ethnicity} onChange={ethnicityChange}/>
           </div>
 

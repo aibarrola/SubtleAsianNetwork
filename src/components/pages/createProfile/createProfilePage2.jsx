@@ -87,23 +87,23 @@ function CreateProfilePage1() {
 
         <form className="createProfile-form" onSubmit={handleSubmit}>
           <div className="createProfile-form-field">
-            <label className="createProfile-form-label">Location:</label>
-            <input type="text" placeholder="E.g. San Jose, San Francisco" className="createProfile-form-input" value={location} onChange={locationChange}/>
+            <label className="createProfile-form-label">Location</label>
+            <input type="text" placeholder="E.g. San Jose, San Francisco" className="createProfile-form-input" value={location} onChange={locationChange} required/>
           </div>
 
           <div className="createProfile-form-field">
-            <label className="createProfile-form-label">Interest:</label>
-            <input type="text" placeholder="E.g. Working out, watching anime, playing sports" className="createProfile-form-input" value={interests} onChange={interestsChange}/>
+            <label className="createProfile-form-label">Interest</label>
+            <input type="text" placeholder="E.g. Working out, watching anime, playing sports" className="createProfile-form-input" value={interests} onChange={interestsChange} required/>
           </div>
 
           <div className="createProfile-form-field">
-            <label className="createProfile-form-label">Bio:</label>
+            <label className="createProfile-form-label">Bio</label>
             <textarea 
-              placeholder="Tell me about yourself!" className="createProfile-textArea" value={bio} onChange={bioChange}></textarea>
+              placeholder="Tell me about yourself!" className="createProfile-textArea" value={bio} onChange={bioChange} required></textarea>
           </div>
 
           <div className="createProfile-form-field">
-          <label className="createProfile-form-label">Team:</label>
+          <label className="createProfile-form-label">Team</label>
             <select className="createProfile-form-input" onChange={groupChange}>
               <option value="5fa0be6605f4aa470804a2cc">Team App A</option>
               <option value = "5fa0b106cfead2209075a991">Team App B</option>
