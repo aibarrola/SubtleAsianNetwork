@@ -54,6 +54,7 @@ function CreateProfilePage1() {
     
     Axios.post(`https://san-api.herokuapp.com/groups/user/${team}/add`,user)
     .then(res=>{
+      localStorage.setItem('user', JSON.stringify(res.data.user.group));  //save the group id to local storage
       console.log(res.data);
     })
     .catch(err=> console.log("Error " + err.msg))

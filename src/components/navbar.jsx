@@ -13,12 +13,18 @@ function Navbar(){
     retrieved = JSON.parse(retrieved);
 
     const [user, setUser] = useState(retrieved);
+    const [group, setGroup] = useState("");
 
     let history = useHistory();
 
     useEffect(() => {
-        setToken(getJwt());
-        console.log(user);
+        setToken(getJwt());        
+        Axios.get(`https://san-api.herokuapp.com/users/${user.user_id}`).then((response) => {
+        setUser(response.data);
+        setGroup(response.data.group);
+        });
+       
+      
     }, [])
 
     function logout() {
@@ -29,8 +35,8 @@ function Navbar(){
         <section>
             <div class="navbar">
                 <a href="/networking"> Network </a>
-                <a href={`/group/${user.group}`}> Groups </a>
-                <a href={`/user/profile/${user.user_id}`}> My Profile </a>
+                <a href={`/group/${group}`}> Groups </a>
+                <a href={`/user/profile/${user.id}`}> My Profile </a>
                 <a href="/" onClick={logout}>Logout</a>
                 {/* <a href="Home"> Home </a> */}
             </div>
