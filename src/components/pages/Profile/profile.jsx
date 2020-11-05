@@ -10,14 +10,29 @@ import { getJwt } from "../../Helpers/jwt";
 
 function Profile() {
   const [user, setUser] = useState([]);
+  const [groupID,setGroupID] = useState();
+  const [group, setGroup] = useState([]);
   const [token, setToken] = useState();
   let { id } = useParams();
 
   useEffect(() => {
     Axios.get(`https://san-api.herokuapp.com/users/${id}`).then((response) => {
       setUser(response.data);
+      Axios.get(`https://san-api.herokuapp.com/groups/${response.data.group}`).then((response) => {
+        setGroup(JSON.stringify(response.data.groupName));
+      });
     });
+
+   
+
+
+    
+
   }, []);
+
+
+  console.log(group); //no output it is blank
+  console.log(user);
 
   return (
     <section>
@@ -36,7 +51,7 @@ function Profile() {
             <h2 className="sideHeader"> Interests </h2>
             <h3 className="sideInfo"> {user.interests} </h3> 
             <h2 className="sideHeader"> Team </h2>
-            <h3 className="sideInfo"> {user.group} </h3>
+            <h3 className="sideInfo"> {group} </h3>
         </div>
 
 
