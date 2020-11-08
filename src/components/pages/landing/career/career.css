@@ -1,0 +1,17 @@
+.career {
+  background-color: #f3f3f3;
+  height: 75vh;
+}
+
+.career-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.career-title {
+  font-size: 48px;
+  text-align: center;
+  padding-bottom: 50px;
+}

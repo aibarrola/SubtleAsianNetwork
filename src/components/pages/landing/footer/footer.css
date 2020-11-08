@@ -1,0 +1,14 @@
+.footer {
+  height: 25vh;
+  background-color: #6E7199;
+}
+
+.footer-container {
+  margin: 0 5%;
+  padding-top: 20px;
+}
+
+.footerLogo {
+  height: 48px;
+  width: auto;
+}

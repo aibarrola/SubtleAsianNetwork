@@ -1,12 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import logo from './img/logo.png'
-import mainSVG from "./img/landingMain.png";
+import logo from './logo.png'
+import mainSVG from "./landingMain.png";
 
-import './css/landing.css';
+import './landing.css';
 
 import Connect from "./connectSection/Connect";
+import Progress from './trackProgress/TrackProgress';
+import Career from './career/Career';
+import Footer from './footer/Footer'
 
 function LandingRevise() {
   return (
@@ -44,6 +47,9 @@ function LandingRevise() {
       </div>
 
       <Connect />
+      <Progress />
+      <Career />
+      <Footer />
     </div>
   )
 }

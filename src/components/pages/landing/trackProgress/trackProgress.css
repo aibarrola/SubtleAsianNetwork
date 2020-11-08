@@ -1,0 +1,29 @@
+.progress {
+  height: 75vh;
+  display: flex;
+  align-items: center;
+}
+
+.progress-container {
+  display: flex;
+  margin: 0 5%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.progress-info-container {
+  width: 50%;
+  height: 50%;
+}
+
+.progress-title {
+  font-size: 36px;
+}
+
+.progress-info {
+  font-size: 20px;
+}
+
+.progressSVG {
+  width: 40%;
+}

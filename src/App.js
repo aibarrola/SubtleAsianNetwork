@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
-import Landing from "./components/pages/landing";
+import Landing from "./components/pages/landing/landing";
 import SignUp from "./components/pages/signup/signUp";
 import Profile from "./components/pages/Profile/profile";
 import CreateProfilePage1 from "./components/pages/createProfile/createProfilePage1";
@@ -10,8 +10,6 @@ import CreateProfilePage2 from "./components/pages/createProfile/createProfilePa
 import LogIn from "./components/pages/login/login";
 import EditProfile from "./components/pages/editProfile/editProfile";
 import GroupPage from "./components/pages/groupPage/groupPage";
-
-import LandingRevise from './components/pages/landingRevise';
 
 function App() {
   return (
@@ -43,9 +41,6 @@ function App() {
         </Route>
         <Route path="/group/:id">
           <GroupPage />
-        </Route>
-        <Route path="/revise">
-          <LandingRevise />
         </Route>
       </Switch>
     </Router>
