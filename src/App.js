@@ -11,6 +11,8 @@ import LogIn from "./components/pages/login/login";
 import EditProfile from "./components/pages/editProfile/editProfile";
 import GroupPage from "./components/pages/groupPage/groupPage";
 
+import LandingRevise from './components/pages/landingRevise';
+
 function App() {
   return (
     <Router>
@@ -41,6 +43,9 @@ function App() {
         </Route>
         <Route path="/group/:id">
           <GroupPage />
+        </Route>
+        <Route path="/revise">
+          <LandingRevise />
         </Route>
       </Switch>
     </Router>

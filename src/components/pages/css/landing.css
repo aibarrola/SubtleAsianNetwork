@@ -19,6 +19,27 @@
   grid-column: 2/3;
 }
 
+/* Revised Style */
+
+.landingSectionRevise {
+  height: 100vh;
+  margin: 0 5%;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-container {
+  display: flex;
+  align-content: flex-end;
+}
+
+.logoRevise {
+  width: 48px;
+  height: auto;
+  margin: 2% 0;
+  margin-left: auto;
+}
+
 .heroBox {
   color: red;
   display: flex;
@@ -30,20 +51,63 @@
   margin-left: 20px;
 }
 
+.hero-container {
+  /* border: 1px solid purple; */
+  display: flex;
+  margin: auto 0;
+  align-items: center;
+
+}
+
+.hero-text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 5%;
+  /* border: 1px solid red; */
+}
+
+.main-title {
+  color: var(--main-blue);
+  font-weight: 600;
+}
+
+.sub-title {
+  font-size: 36px;
+}
+
+.hero-desc-item {
+  font-size: 18px;
+}
+
+.hero-img {
+  width: 50%
+}
+
+.hero-img img{
+  width: 100%;
+  height: auto;
+}
+
 .btnContainer {
   display: flex;
   justify-content: center;
   margin-top: 40px;
 }
 
+.btn-container-revise {
+  /* border: 1px solid red; */
+  margin: 3% 0;
+}
+
 .BTNsignUp {
   border-radius: 15px;
   padding: 20px 30px;
-  width: 200px;
+  /* width: 200px; */
   color: #fff;
-  background-color: #057be8;
-  margin-left: 10px;
+  background-color: var(--main-blue);
   border: 0px;
+  font-size: 18px;
 }
 
 .BTNsignUp:hover {
@@ -53,17 +117,19 @@
 .BTNlogIn {
   border-radius: 15px;
   padding: 20px 30px;
-  width: 200px;
+  /* width: 200px; */
   color: #fff;
   border: 0px;
   margin-left: 10px;
   opacity: 50%;
-  background-color: #f3869c;
+  background-color: var(--accent-color);
+  font-size: 18px;
 }
 
 .BTNlogIn:hover {
   background-color: var(--btn-hover-color);
 }
+/* End Revise Styling */
 
 .introText {
   margin-top: 15px;
@@ -73,12 +139,6 @@ p {
   color: black;
 }
 
-/* svg {
-  grid-row: 2/3;
-  grid-column: 2/3;
-  width: 100px;
-  height: 100px;
-} */
 .mainSVG {
   display: flex;
   flex-direction: column;
