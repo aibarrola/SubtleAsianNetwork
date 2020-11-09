@@ -23,7 +23,7 @@ function Tasks({ todos, toggleComplete, removeToDo, filter }) {
       {todosFilter.map((todo) => (
         <ToDo
           todo={todo}
-          key={todo.id}
+          key={todo._id}
           removeToDo={removeToDo}
           toggleComplete={toggleComplete}
         />

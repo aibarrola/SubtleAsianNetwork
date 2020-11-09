@@ -3,50 +3,68 @@ import "./groupPage.css";
 import "./groupToDo.css";
 import ToDoContainer from "../groupPage/toDoContainer";
 import ToDoForm from "../groupPage/toDoForm";
-
-const LOCAL_STORAGE_KEY = "react-todo-list-todos";
+import Axios from "axios";
+import { useParams } from "react-router-dom";
 
 function GroupToDo() {
+  let {id} = useParams();
   const [todos, setTodos] = useState([]);
   const [questions, setQuestions] = useState([]);
   const [filter, setFilter] = useState("all");
 
   useEffect(() => {
-    // fires when app component mounts to the DOM
-    const storageTodos = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
-    if (storageTodos) {
-      setTodos(storageTodos);
-    }
+    Axios.get(`https://san-api.herokuapp.com/groups/${id}/`)
+    .then((res)=>{
+      setTodos(res.data.toDos.reverse())
+    })
+    .catch(err=>console.log(err))
   }, []);
 
-  useEffect(() => {
-    // fires when todos array gets updated
-    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(todos));
-  }, [todos]);
-
   function addToDo(todo) {
-    // adds new todo to beginning of todos array
-    setTodos([todo, ...todos]);
+    Axios.post(`https://san-api.herokuapp.com/groups/todo/${id}/add/`,todo)
+    .then((res)=>{
+      Axios.get(`https://san-api.herokuapp.com/groups/${id}/`)
+      .then((res)=>{
+        setTodos(res.data.toDos.reverse())
+      })
+      .catch(err=>console.log(err))
+    })
+    .catch(err=>console.log(err))
+   
   }
 
   // Switches completetion state to completed or not completed
-  function toggleComplete(id) {
+ async function toggleComplete(_id, checked) {
     setTodos(
       todos.map((todo) => {
-        if (todo.id === id) {
+        if (todo._id === _id) {
           return {
             ...todo,
-            completed: !todo.completed,
+            checked: !todo.checked,
           };
         }
         return todo;
       })
     );
+    const request = {
+      todoId: _id,
+      todoBoolean: !checked
+    }
+    Axios.post(`https://san-api.herokuapp.com/groups/todo/${id}/update/`,request)
+    .catch(err=>console.log(err))
   }
 
   //Remove todo from list
-  function removeToDo(id) {
-    setTodos(todos.filter((todo) => todo.id !== id));
+  async function removeToDo(_id) {
+    setTodos(todos.filter((todo) => todo._id !== _id));
+    const request={
+      todoId: _id
+    }
+    Axios.post(`https://san-api.herokuapp.com/groups/todo/${id}/delete/`,request)
+    .then((res)=>{
+      console.log(res);
+    })
+    .catch(err=>console.log(err));
   }
 
   //Changes the filter state
