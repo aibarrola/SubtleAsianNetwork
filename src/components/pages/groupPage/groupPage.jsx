@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-
+import Axios from "axios"
 import "./groupPage.css";
 import GroupToDo from "../groupPage/groupToDo";
 import Announcments from "../groupPage/announcements";
@@ -9,28 +9,57 @@ import GroupHeader from "./groupHeader";
 import QnA from "./qna";
 import Sidebar from "./sideBar/SideBar.jsx";
 
+
+
 function Grouppage() {
-  //make this into one UseState when not half asleep
-  const [groupSetting, settingChange] = useState({
-    groupName: "Group Names",
-    gitHub: "",
-    projectPercent: 10,
-    description: "This is the web dev Team",
-  });
-  /*   const [popUpForm, setPopUpForm] = useState({
-    groupName: "Group Names",
-    gitHub: "",
-    projectPercent: 0,
-    description: "",
-  }); */
-  const [groupName, setGroupName] = useState("Group Name");
+  let {id} = useParams();
+  
+  const [groupName, setGroupName] = useState("");
   const [github, setGithub] = useState("");
   const [projectPercent, setPercent] = useState(0);
   const [description, setDescription] = useState("");
 
+//make this into one UseState when not half asleep
+const [groupSetting, settingChange] = useState({
+  groupName: null,
+  gitHub: null,
+  projectPercent: null,
+  description: null,
+});
+
+  useEffect(()=>{
+    Axios.get(`https://san-api.herokuapp.com/groups/${id}/`)
+    .then((res)=>{
+      settingChange({
+        groupName: res.data.groupName,
+        gitHub: res.data.link,
+        projectPercent: res.data.percent,
+        description: res.data.description
+      });
+      setGroupName(res.data.groupName);
+      setGithub(res.data.link);
+      setPercent(res.data.percent);
+      setDescription(res.data.description);
+    })
+    .catch(err =>{
+      console.log(err);
+    }) 
+  },[])
+
+
   function handleSubmit(e) {
     e.preventDefault();
-    settingChange({
+      const updatedGroup ={
+        groupName: groupName,
+        link: github,
+        percent: projectPercent,
+        description: description,
+      }
+      Axios.post(`https://san-api.herokuapp.com/groups/${id}/update`, updatedGroup)
+      .catch(err =>{
+        console.log(err);
+      })
+     settingChange({
       groupName: groupName,
       gitHub: github,
       projectPercent: projectPercent,
@@ -61,6 +90,7 @@ function Grouppage() {
               <input
                 type="text"
                 name="name"
+                value= {groupName}
                 className="popInput"
                 onChange={(e) => setGroupName(e.target.value)}
               />
@@ -70,6 +100,7 @@ function Grouppage() {
               <input
                 type="text"
                 name="name"
+                value={github}
                 className="popInput"
                 onChange={(e) => setGithub(e.target.value)}
               />
@@ -80,6 +111,7 @@ function Grouppage() {
                 type="number"
                 name="name"
                 className="popPercent"
+                value={projectPercent}
                 min="0"
                 max="100"
                 onChange={(e) => setPercent(e.target.value)}
@@ -90,6 +122,7 @@ function Grouppage() {
               <input
                 type="text"
                 name="name"
+                value= {description}
                 onChange={(e) => setDescription(e.target.value)}
                 className="popDesciption"
               />
