@@ -32,3 +32,40 @@
   color: white;
   font-size: 20px;
 }
+
+/* Reponsive 414px and below (iPhone6/7/8 Plus) */
+@media only screen and (max-width: 414px) {
+  .connect-container {
+    height: 100vh;
+  }
+
+  .connectSection-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .connectSection-info-container {
+    width: 80%;
+  }
+
+  .connectSection-title {
+    font-size: 28px;
+  }
+
+  .connectSection-info {
+    font-size: 16px;
+  }
+
+  .connectSVG {
+    width: 80%;
+  }
+
+
+}
+
+/* 375px */
+@media only screen and (max-width: 375px) {
+  .connectSection-title {
+    font-size: 24px;
+  }
+}
