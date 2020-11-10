@@ -11,7 +11,7 @@ function Connect() {
         <div className="connectSection-info-container">
           <h2 className="connectSection-title">Connect with Others</h2>
           <p className="connectSection-info">
-            Learn about other people in the Kickstarter program and expand your network. You will also get to see other groups and learn about what they are currently doing by asking questions or simply viewing their progress.
+            Learn about other people in the Kickstarter program and expand your network. View other groups and learn about what they are currently working on 
           </p>
         </div>
       </div>

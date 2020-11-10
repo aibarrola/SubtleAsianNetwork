@@ -56,7 +56,7 @@ function Login(){
                 </div>
                 <div className = "signUp-label-container">
                     <label className="community-label">New to the community?</label>
-                    <label className = "login-signup-label">Sign Up Now</label>
+                   <a href="/signup"> <label className = "login-signup-label"> Sign Up Now </label> </a>
                 </div>
                 </form>
             </div>

@@ -23,7 +23,7 @@ function LandingRevise() {
         <div className="hero-container">
           <div className="hero-text">
             <div className="hero-title">
-              <h1 className="main-title">Subtle Asain Network</h1>
+              <h1 className="main-title">Subtle Asian Network</h1>
               <h1 className="sub-title">Kickstarter Program</h1>
             </div>
             <div className="hero-desc">
