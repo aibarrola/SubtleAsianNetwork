@@ -27,3 +27,54 @@
 .progressSVG {
   width: 40%;
 }
+
+/* 414px and below */
+@media only screen and (max-width: 414px) {
+  .progress {
+    height: 100vh;
+  }
+
+  .progress-container {
+    flex-direction: column;
+    justify-content: space-around;
+    height: 70%;
+  }
+
+  .progress-info-container {
+    width: 80%;
+  }
+
+  .progress-title {
+    font-size: 28px;
+  }
+
+  .progress-info {
+    font-size: 16px;
+  }
+
+  .progressSVG {
+    width: 90%;
+  }
+}
+
+/* 375px and below */
+@media only screen and (max-width: 375px) {
+  .progress-container {
+    height: 80%;
+  }
+
+  .progress-title {
+    font-size: 24px;
+  }
+
+  .progress-info {
+    height: 18px;
+  }
+}
+
+/* 320px and below */
+@media only screen and (max-width: 320px) {
+  .progress-container {
+    height: 100%;
+  }
+}
