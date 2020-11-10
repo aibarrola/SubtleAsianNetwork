@@ -6,25 +6,25 @@ import { faTrash, faCheck } from "@fortawesome/free-solid-svg-icons";
 
 function Todo({ todo, toggleComplete, removeToDo }) {
   function handleCheckboxClick() {
-    toggleComplete(todo.id);
+    toggleComplete(todo._id,todo.checked);
   }
 
   function handleRemoveClick() {
-    removeToDo(todo.id);
+    removeToDo(todo._id);
   }
   return (
     <div className="taskLi shadow">
       <div className={`toDoCheckBox`}>
         <div
-          className={`checkCircle ${todo.completed ? "" : "active"}`}
+          className={`checkCircle ${todo.checked ? "" : "active"}`}
           onClick={handleCheckboxClick}
         >
-          {todo.completed && (
+          {todo.checked && (
             <FontAwesomeIcon className="checkIcon" icon={faCheck} />
           )}
         </div>
       </div>
-      <small className="taskName"> {todo.taskName} </small>
+      <small className="taskName"> {todo.description} </small>
       <small className="taskDate"> Due March 2nd </small>
       <FontAwesomeIcon
         icon={faTrash}
