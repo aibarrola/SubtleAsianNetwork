@@ -14,10 +14,10 @@ import Footer from './footer/Footer'
 function LandingRevise() {
   return (
     <div>
-      <div className="landingSectionRevise">
+      <div className="landingSection">
 
         <div className="logo-container">
-          <img src={logo} className="logoRevise" alt="Logo"/>
+          <img src={logo} className="logo" alt="Logo"/>
         </div>
 
         <div className="hero-container">
@@ -29,7 +29,7 @@ function LandingRevise() {
             <div className="hero-desc">
               <p className="hero-desc-item">Keep track of your team's progress</p>
             </div>
-            <div className="btn-container-revise">
+            <div className="btn-container">
               <Link to="/signup">
                 <button className="BTNsignUp"> Sign Up </button>
               </Link>

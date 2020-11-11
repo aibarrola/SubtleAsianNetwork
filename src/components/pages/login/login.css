@@ -91,8 +91,16 @@
     margin-bottom: 15px;
 }
 .login-signup-label{
-    color:var(--link-color);
+    color:var(--link-color);    
 }
+.login-signup-label:hover{
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+}
+
 .community-label{
     margin-right: 7px;
 }
