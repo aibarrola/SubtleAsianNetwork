@@ -19,7 +19,6 @@ class SignUp extends React.Component {
       firstName: null,
       lastName: null,
       email: null,
-      birthDate: null,
       password: null,
       confirmPassword: null,
       emailCheckDouble: "",
@@ -40,7 +39,6 @@ class SignUp extends React.Component {
       firstName: this.state.firstName,
       lastName: this.state.lastName,
       email: this.state.email,
-      birthDate: this.state.birthDate,
       password: this.state.password,
     };
     
@@ -77,10 +75,6 @@ class SignUp extends React.Component {
       case "lastName":
         errors.lastName =
           value.length < 2 ? "Please enter 2 or more charecters" : "";
-
-        break;
-      case "birtdate":
-        errors.birthdate = "This field is required";
 
         break;
       case "email":
@@ -139,20 +133,6 @@ class SignUp extends React.Component {
                       <span className="error">{errors.lastName}</span>
                     )}
                   </div>
-                </div>
-
-                <div className="birthday-field">
-                  <label className="form-label">Birth Date</label>
-                  <input
-                    type="date"
-                    placeholder="01/01/2020"
-                    className="field"
-                    name="birthDate"
-                    onChange={this.handleChange}
-                  />
-                  {!Date.parse(this.state.birthdate) && (
-                    <span className="error">{errors.birthday}</span>
-                  )}
                 </div>
 
                 <div className="email-field">
