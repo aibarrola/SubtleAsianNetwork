@@ -1,14 +1,22 @@
 .footer {
   height: 25vh;
-  background-color: #6E7199;
+  background-color: var(--main-grey);
 }
 
 .footer-container {
   margin: 0 5%;
   padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .footerLogo {
   height: 48px;
   width: auto;
+}
+
+.footerBTN {
+  margin-top: 30px;
 }

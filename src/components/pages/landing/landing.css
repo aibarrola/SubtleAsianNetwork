@@ -32,7 +32,7 @@
 }
 
 .main-title {
-  color: var(--main-blue);
+  color: var(--main-dark);
   font-weight: 600;
 }
 
@@ -45,10 +45,10 @@
 }
 
 .hero-img {
-  width: 50%
+  width: 50%;
 }
 
-.hero-img img{
+.hero-img img {
   width: 100%;
   height: auto;
 }
@@ -65,22 +65,24 @@
 
 .BTNsignUp {
   border-radius: 15px;
-  padding: 20px 30px;
-  color: #fff;
-  background-color: var(--main-blue);
+  padding: 20px 70px;
+  color: var(--main-dark);
+  background-color: var(--main-color);
   border: 0px;
   font-size: 18px;
 }
 
 .BTNsignUp:hover {
-  background-color: var(--btn-blue-hover);
+  background-color: var(--accent-color);
+  color: var(--main-white);
 }
 
 .BTNlogIn {
   border-radius: 15px;
   padding: 20px 30px;
-  color: #fff;
+  color: var(--main-dark);
   border: 0px;
+
   margin-left: 10px;
   opacity: 50%;
   background-color: var(--accent-color);
@@ -89,10 +91,11 @@
 
 .BTNlogIn:hover {
   background-color: var(--btn-hover-color);
+  color: var(--main-white);
 }
 
 h2 {
-  color: var(--main-blue);
+  color: var(--main-color);
   margin-bottom: 20px;
 }
 
@@ -107,7 +110,7 @@ h2 {
     justify-content: space-between;
     height: 65%;
   }
-  
+
   .hero-text {
     width: 100%;
     display: flex;
