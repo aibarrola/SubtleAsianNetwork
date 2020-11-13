@@ -55,18 +55,19 @@
     width: 100%;
     display: flex;
     justify-content: center;
-   align-content: center;
+    align-content: center;
   }
 .signin-btn{
     background-color: var(--accent-color);
     color: white;
     border:none;
     font-size: 1.5rem;
-     width: 40%;
-     margin: 30px;
+    width: 40%;
+    margin: 30px;
     padding: 10px 0;
     border-radius: 18px;
     transition: ease-in-out 0.3s;
+    cursor: pointer;
 }  
 .signin-btn:hover {
     background-color: var(--btn-hover-color);
@@ -90,6 +91,11 @@
     color:var(--link-color);
     margin-bottom: 15px;
 }
+
+.forgetpass-label label {
+  cursor: pointer;
+}
+
 .login-signup-label{
     color:var(--link-color);    
 }

@@ -10,6 +10,7 @@ import CreateProfilePage2 from "./components/pages/createProfile/createProfilePa
 import LogIn from "./components/pages/login/login";
 import EditProfile from "./components/pages/editProfile/editProfile";
 import GroupPage from "./components/pages/groupPage/groupPage";
+import ForgotPassword from './components/pages/forgotPassword/ForgotPassword'
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
         </Route>
         <Route path="/login">
           <LogIn />
+        </Route>
+        <Route path="/forgotpassword">
+          <ForgotPassword />
         </Route>
         <Route path="/networking">
           <Networking />
