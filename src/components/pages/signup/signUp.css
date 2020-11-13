@@ -27,7 +27,7 @@
   text-align: center;
   font-weight: 600;
   /** font-size: 5rem;**/
-  color: var(--main-color);
+  color: var(--main-dark);
 }
 
 .signUp-form-fields {
@@ -90,7 +90,7 @@
 }
 
 .btn-register {
-  background-color: var(--accent-color);
+  background-color: var(--main-color);
   color: white;
   border: none;
   font-size: 1.5rem;
@@ -102,7 +102,8 @@
 }
 
 .btn-register:hover {
-  background-color: var(--btn-hover-color);
+  background-color: var(--accent-color);
+  color: var(--main-dark);
 }
 h1 {
   font-weight: 100;

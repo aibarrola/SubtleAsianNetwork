@@ -44,9 +44,9 @@
 }
 
 .createProfile-name {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: bold;
-  color: var(--main-color);
+  color: var(--main-dark);
   text-align: center;
 }
 
@@ -97,7 +97,7 @@
 }
 
 .btn-continue {
-  background-color: var(--accent-color);
+  background-color: var(--main-color);
   color: white;
   border: none;
   font-size: 1.5rem;
@@ -109,5 +109,6 @@
 }
 
 .btn-continue:hover {
-  background-color: var(--btn-hover-color);
+  background-color: var(--accent-color);
+  color: var(--main-dark);
 }
