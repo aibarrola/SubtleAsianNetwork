@@ -69,17 +69,17 @@ class SignUp extends React.Component {
     switch (name) {
       case "firstName":
         errors.firstName =
-          value.length < 2 ? "Please enter 2 or more charecters" : "";
+          value.length < 2 ? "2 Characters Minimum" : "";
 
         break;
       case "lastName":
         errors.lastName =
-          value.length < 2 ? "Please enter 2 or more charecters" : "";
+          value.length < 2 ? "2 Characters Minimum" : "";
 
         break;
       case "email":
         this.setState({ emailCheckDouble: "" });
-        errors.email = validEmailRegex.test(value) ? "" : "Email is not valid!";
+        errors.email = validEmailRegex.test(value) ? "" : "Invalid Email";
         break;
       case "password":
         errors.password = value.length < 8 ? "8 Characters Minimum" : "";

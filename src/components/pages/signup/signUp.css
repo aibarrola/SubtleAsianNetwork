@@ -43,10 +43,10 @@
 
 .form-label {
   position: relative;
-  top: 10px;
-  left: 10px;
-  background-color: white;
-  width: 30%;
+  top: 0px;
+  left: 3px;
+  background-color: clear;
+  width: 50%;
 }
 
 .signUp-form-fields div {
@@ -112,6 +112,6 @@ h1 {
 
 .error {
   color: #db2269;
-  font-size: 1em;
+  font-size: 0.8rem;
   display: relative;
 }
