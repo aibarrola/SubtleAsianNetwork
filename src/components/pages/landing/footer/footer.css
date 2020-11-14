@@ -1,5 +1,5 @@
 .footer {
-  height: 25vh;
+  height: 30%vh;
   background-color: var(--main-grey);
 }
 
@@ -19,4 +19,5 @@
 
 .footerBTN {
   margin-top: 30px;
+  margin-bottom:30px;
 }
