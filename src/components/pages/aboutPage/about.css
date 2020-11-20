@@ -12,12 +12,21 @@
   height: 20vh;
 }
 
+.kickStart {
+  font-size: 70px;
+}
+
 .kickDefintion {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  color: var(--secondary-grey);
+}
+
+.kickSmall {
+  font-size: 35px;
 }
 
 .kickStartDef {
@@ -48,7 +57,7 @@
   flex-direction: row;
   justify-content: space-around;
   width: 100%;
-  height: 50vh;
+  height: 80vh;
 }
 
 .jade-title {
@@ -67,6 +76,7 @@
   row-gap: 40px;
   grid-template-columns: 1fr 1fr;
   height: 40vh;
+  margin-bottom: 200px;
 }
 
 .circleDir {

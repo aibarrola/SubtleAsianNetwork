@@ -14,8 +14,8 @@ function aboutPage() {
       <div className="kickStartContainer">
         <div className="kickDefintion">
           <div className="flexCenterCol">
-            <h1 className="main-title"> kick-start </h1>
-            <small className="main-title"> /ˈkikˌstärt/ </small>
+            <h1 className="main-title kickStart"> kick-start </h1>
+            <small className="main-title kickSmall"> /ˈkikˌstärt/ </small>
           </div>
 
           <p className="kickStartDef">

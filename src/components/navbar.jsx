@@ -47,17 +47,24 @@ function Navbar() {
           Logout
         </a> */}
       {/*   <a href="/networking"> Networking </a> */}
-      <small className="navTitle"> Jade </small>
+      <small className={showNav ? "navTitle active" : "navTitle "}>
+        {" "}
+        Jade{" "}
+      </small>
 
       <div>
-        <a href="/login" className="navRight">
+        <a href="/login" className={showNav ? "active" : " "}>
           Login
         </a>
-        <span className="navRight"> | </span>
-        <a href="/about" className="navRight">
+        <span className={showNav ? "active" : " "}> | </span>
+        <a href="/about" className={showNav ? "active" : " "}>
           About
         </a>
-        <button href="/signup" className="BTNsignUp navSignUp navRight">
+        <button
+          href="/signup"
+          class={showNav ? " navSignUp active " : "BTNsignUp navSignUp"}
+          className="BTNsignUp navRight"
+        >
           Sign Up
         </button>
         {/* <a href={`/group/${group}`}> Groups </a> */}
