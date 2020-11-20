@@ -12,7 +12,7 @@ function CreateProfilePage1() {
   const [interests, setInterests] = useState('');
   const [bio, setBio] = useState('');
   const [token, setToken] = useState();
-  const [team, setTeam] = useState('5fa0be6605f4aa470804a2cc');
+  const [team, setTeam] = useState('5fab84088ee9e54cf8d137b5');
 
   let {id} = useParams();
   let userString = localStorage.getItem('user');
@@ -54,8 +54,7 @@ function CreateProfilePage1() {
     
     Axios.post(`https://san-api.herokuapp.com/groups/user/${team}/add`,user)
     .then(res=>{
-      localStorage.setItem('user', JSON.stringify(res.data.user.group));  //save the group id to local storage
-      console.log(res.data);
+      //localStorage.setItem('user', JSON.stringify(res.data.user.group));  //save the group id to local storage
     })
     .catch(err=> console.log("Error " + err.msg))
     // Axios.post(`http://localhost:5000/users/${id}/createprofile/2`, updateOne, config)
@@ -105,13 +104,13 @@ function CreateProfilePage1() {
           <div className="createProfile-form-field">
           <label className="createProfile-form-label">Team</label>
             <select className="createProfile-form-input" onChange={groupChange}>
-              <option value="5fa0be6605f4aa470804a2cc">Team App A</option>
-              <option value = "5fa0b106cfead2209075a991">Team App B</option>
-              <option value ="5fa0b10ccfead2209075a992">Team App C</option>
-              <option value = "5fa0b15acfead2209075a994">Team Web A</option> 
-              <option value = "5fa0b15fcfead2209075a995">Team Web B</option> 
-              <option value = "5fa0b165cfead2209075a996" >Team Web C</option> 
-              <option value ="5fa0b180cfead2209075a997">Discord</option>
+              <option value="5fab84088ee9e54cf8d137b5">Team App A</option>
+              <option value = "5fab84358ee9e54cf8d137b6">Team App B</option>
+              <option value ="5fab843c8ee9e54cf8d137b7">Team App C</option>
+              <option value = "5fab844c8ee9e54cf8d137b9">Team Web A</option> 
+              <option value = "5fab84538ee9e54cf8d137ba">Team Web B</option> 
+              <option value = "5fab84578ee9e54cf8d137bb" >Team Web C</option> 
+              <option value ="5fab845e8ee9e54cf8d137bc">Discord</option>
             </select>
           </div>
           <div className="createProfile-btn-container"> 

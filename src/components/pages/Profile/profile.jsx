@@ -11,7 +11,7 @@ import { getJwt } from "../../Helpers/jwt";
 function Profile() {
   const [user, setUser] = useState([]);
   const [groupID,setGroupID] = useState();
-  const [group, setGroup] = useState([]);
+  const [group, setGroup] = useState();
   const [token, setToken] = useState();
   let { id } = useParams();
 
@@ -19,7 +19,7 @@ function Profile() {
     Axios.get(`https://san-api.herokuapp.com/users/${id}`).then((response) => {
       setUser(response.data);
       Axios.get(`https://san-api.herokuapp.com/groups/${response.data.group}`).then((response) => {
-        setGroup(JSON.stringify(response.data.groupName));
+        setGroup(response.data.groupName);
       });
     });
 

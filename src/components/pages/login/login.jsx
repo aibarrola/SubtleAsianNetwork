@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Axios from 'axios';
+import { Link } from "react-router-dom";
 import "./login.css";
 
 function Login(){
@@ -52,7 +53,9 @@ function Login(){
                         <button type = "submit" className = "signin-btn">Sign In</button>
                     </div>
                     <div className = "forgetPassword-container">
-                    <label className ="forgetpass-label">Forgot Password?</label>
+                    <Link to="/forgotpassword" className ="forgetpass-label">
+                      <label>Forgot Password?</label>
+                    </Link>
                 </div>
                 <div className = "signUp-label-container">
                     <label className="community-label">New to the community?</label>

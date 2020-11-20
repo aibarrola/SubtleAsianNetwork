@@ -15,17 +15,27 @@
 /* CSS Varibles for color */
 /* Feel free to change the variable names, just message the chat if you do */
 :root {
+  /* OLD COLORS (Delete Soon) */
   --main-color: #c15f77;
   --accent-color: #f1607f;
   --btn-hover-color: #fa305c;
 
   --main-blue: #057be8;
+  --main-blue-hover: #0084ff;
   --secondary-blue: #3779b6;
   --btn-blue-hover: #3a8fdf;
 
   --link-color: #5d98b9;
   --primary-border-color: #e4e4e4;
   --gray-border-color: #96a3aa;
+
+  /*Redesign Colors */
+  --main-color: #3ddc84;
+  --accent-color: #16eb76;
+  --main-white: #ffffff;
+  --main-grey: #ebedf2;
+  --main-dark: #0f0a0a;
+  --light-grey: #f8f4f4;
 }
 
 .flex-column {
