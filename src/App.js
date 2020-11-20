@@ -10,7 +10,9 @@ import CreateProfilePage2 from "./components/pages/createProfile/createProfilePa
 import LogIn from "./components/pages/login/login";
 import EditProfile from "./components/pages/editProfile/editProfile";
 import GroupPage from "./components/pages/groupPage/groupPage";
+
 import ForgotPassword from './components/pages/forgotPassword/ForgotPassword';
+import Aboutpage from "./components/pages/aboutPage/about";
 import ReactGA from 'react-ga';
 
 
@@ -52,6 +54,9 @@ function App() {
         </Route>
         <Route path="/group/:id">
           <GroupPage />
+        </Route>
+        <Route path="/about">
+          <Aboutpage />
         </Route>
       </Switch>
     </Router>

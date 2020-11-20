@@ -1,0 +1,105 @@
+.about {
+  display: flex;
+  flex-direction: column;
+}
+
+.kickStartContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 20vh;
+}
+
+.kickStart {
+  font-size: 70px;
+}
+
+.kickDefintion {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  color: var(--secondary-grey);
+}
+
+.kickSmall {
+  font-size: 35px;
+}
+
+.kickStartDef {
+  display: flex;
+  font-size: 30px;
+}
+
+.buildProjectSection {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-around;
+  height: 60vh;
+}
+
+.greenLine {
+  width: 100%;
+  background-color: var(--main-color);
+  height: 5px;
+}
+
+.buildProjectText {
+  margin-top: 20px;
+  align-self: flex-end;
+}
+.jadeContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  height: 80vh;
+}
+
+.jade-title {
+  font-weight: bold;
+  justify-self: start;
+  align-self: start;
+}
+.jadeDef {
+  margin-top: 30px;
+  font-size: 27px;
+}
+
+.directions {
+  display: grid;
+  padding: 0 10%;
+  row-gap: 40px;
+  grid-template-columns: 1fr 1fr;
+  height: 40vh;
+  margin-bottom: 200px;
+}
+
+.circleDir {
+  border-radius: 50%;
+  width: 105px;
+  height: 105px;
+  background-color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.dirContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  font-weight: bold;
+  justify-content: space-evenly;
+}
+
+.dirSmall {
+  font-size: 45px;
+}
