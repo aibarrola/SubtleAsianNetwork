@@ -11,7 +11,7 @@ function Footer() {
       <div className="footer-container">
         {/*  <img src={Logo} className="footerLogo" alt="Footer Logo"/> */}
 
-        <h1> Kickstart your career now </h1>
+        <h1 className="footerTitle"> Kickstart your career now </h1>
         <Link to="/signup">
           <button className="BTNsignUp footerBTN"> Join now </button>
         </Link>
