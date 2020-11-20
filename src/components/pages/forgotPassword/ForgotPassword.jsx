@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Axios from 'axios';
 
 import './forgotPassword.css';
 import Logo from '../landing/logo.png';
@@ -17,7 +18,9 @@ function ForgotPassword() {
 
   function submitForgotPassword(e) {
     e.preventDefault();
-    console.log(email)
+
+    Axios.post(`https://san-api.herokuapp.com/users/forgotpassword`, {email})
+      .then(res => console.log(res.data));
   }
 
   return (

@@ -10,7 +10,8 @@ import CreateProfilePage2 from "./components/pages/createProfile/createProfilePa
 import LogIn from "./components/pages/login/login";
 import EditProfile from "./components/pages/editProfile/editProfile";
 import GroupPage from "./components/pages/groupPage/groupPage";
-import ForgotPassword from './components/pages/forgotPassword/ForgotPassword'
+import ForgotPassword from './components/pages/forgotPassword/ForgotPassword';
+import ResetPassword from './components/pages/forgotPassword/ResetPassword';
 
 function App() {
   return (
@@ -45,6 +46,9 @@ function App() {
         </Route>
         <Route path="/group/:id">
           <GroupPage />
+        </Route>
+        <Route path="/resetpassword/:token">
+          <ResetPassword />
         </Route>
       </Switch>
     </Router>
