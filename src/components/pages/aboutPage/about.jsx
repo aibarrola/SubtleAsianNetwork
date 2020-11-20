@@ -3,12 +3,14 @@ import Footer from "../landing/footer/Footer";
 import "../aboutPage/about.css";
 import mapSVG from "./img/aboutMap.svg";
 import newIdeasSVG from "./img/newIdeas.svg";
+import Navbar from "../../navbar";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function aboutPage() {
   return (
     <div className="about">
+      <Navbar />
       <div className="kickStartContainer">
         <div className="kickDefintion">
           <div className="flexCenterCol">
