@@ -11,6 +11,8 @@ import Email from './Email-icon.svg';
 function ForgotPassword() {
 
   const [email, setEmail] = useState('');
+  const [finished, setFinished] = useState(false);
+  const [error, setError] = useState(false);
 
   function emailChange(e) {
     setEmail(e.target.value);
@@ -20,7 +22,15 @@ function ForgotPassword() {
     e.preventDefault();
 
     Axios.post(`https://san-api.herokuapp.com/users/forgotpassword`, {email})
-      .then(res => console.log(res.data));
+      .then(res => {
+        if (res.data.status === 'ok') {
+          setFinished(true);
+          setError(false);
+        } else {
+          setFinished(false)
+          setError(true);
+        }
+      });
   }
 
   return (
@@ -48,8 +58,9 @@ function ForgotPassword() {
                   <input type="email" className="forgotPassword-form-field-input" placeholder="Enter email here" onChange={emailChange} value={email}/>
                 </div>
               </div>
+              {finished && <p className="resetPassword-sent success-msg">Email successfully sent!</p>}
+              {error && <p className="resetPassword-sent err-msg">Email successfully sent!</p>}
               <div className="forgotPassword-form-btn-container">
-                {/* <button className="reset-password-btn">RESET PASSWORD</button> */}
                 <input type="submit" className="reset-password-btn" value="RESET PASSWORD" onClick={submitForgotPassword}/>
                 <Link to="/login" className="btli">Back to log in</Link>
               </div>

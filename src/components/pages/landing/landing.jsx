@@ -10,14 +10,16 @@ import Connect from "./connectSection/Connect";
 import Progress from "./trackProgress/TrackProgress";
 import Career from "./career/Career";
 import Footer from "./footer/Footer";
+import Navbar from "../../navbar";
 
 function LandingRevise() {
   return (
     <div>
+      <Navbar />
       <div className="landingSection">
-        <div className="logo-container">
+        {/*   <div className="logo-container">
           <img src={logo} className="logo" alt="Logo" />
-        </div>
+        </div> */}
 
         <div className="hero-container">
           <div className="hero-text">

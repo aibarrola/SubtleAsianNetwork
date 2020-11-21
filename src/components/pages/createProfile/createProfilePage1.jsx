@@ -82,7 +82,7 @@ function CreateProfilePage1() {
 
           <div className="createProfile-form-field">
             <label className="createProfile-form-label">Profession</label>
-            <input type="text" placeholder="E.g. Computer Engineering Student, Software Engineer Intern" className="createProfile-form-input" value={profession} onChange={professionChange} required/>
+            <input type="text" placeholder="E.g. Computer Science Student, Software Engineer Intern" className="createProfile-form-input" value={profession} onChange={professionChange} required/>
           </div>
 
           <div className="createProfile-form-field">
