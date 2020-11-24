@@ -26,11 +26,12 @@ function ForgotPassword() {
         if (res.data.status === 'ok') {
           setFinished(true);
           setError(false);
-        } else {
-          setFinished(false)
-          setError(true);
         }
-      });
+      })
+      .catch (err => {
+        setFinished(false);
+        setError(true);
+      })
   }
 
   return (
@@ -59,7 +60,7 @@ function ForgotPassword() {
                 </div>
               </div>
               {finished && <p className="resetPassword-sent success-msg">Email successfully sent!</p>}
-              {error && <p className="resetPassword-sent err-msg">Email successfully sent!</p>}
+              {error && <p className="resetPassword-sent err-msg">Email was not found, please try again</p>}
               <div className="forgotPassword-form-btn-container">
                 <input type="submit" className="reset-password-btn" value="RESET PASSWORD" onClick={submitForgotPassword}/>
                 <Link to="/login" className="btli">Back to log in</Link>
