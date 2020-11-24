@@ -17,7 +17,7 @@ function ResetPassword() {
   const [finish, setFinished] = useState(false);
 
   useEffect(() => {
-    Axios.get(`http://localhost:5000/users/reset/${token}`)
+    Axios.get(`https://san-api.herokuapp.com/users/reset/${token}`)
       .then(res => {
         if (res.data.message === 'valid token') {
           setUpdate(true);
