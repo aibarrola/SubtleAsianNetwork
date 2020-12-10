@@ -10,7 +10,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function aboutPage() {
   return (
     <div className="about">
-      <Navbar />
+      <Navbar className="navBar" />
       <div className="kickStartContainer">
         <div className="kickDefintion">
           <div className="flexCenterCol">

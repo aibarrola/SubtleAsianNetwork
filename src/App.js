@@ -1,4 +1,4 @@
-import React, { useEffect }  from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 import Landing from "./components/pages/landing/landing";
@@ -10,17 +10,16 @@ import CreateProfilePage2 from "./components/pages/createProfile/createProfilePa
 import LogIn from "./components/pages/login/login";
 import EditProfile from "./components/pages/editProfile/editProfile";
 import GroupPage from "./components/pages/groupPage/groupPage";
-import ForgotPassword from './components/pages/forgotPassword/ForgotPassword';
-import ResetPassword from './components/pages/forgotPassword/ResetPassword';
-import ReactGA from 'react-ga';
-import Aboutpage from './components/pages/aboutPage/about';
+import ForgotPassword from "./components/pages/forgotPassword/ForgotPassword";
+import ResetPassword from "./components/pages/forgotPassword/ResetPassword";
+/* import ReactGA from 'react-ga'; */
+import Aboutpage from "./components/pages/aboutPage/about";
 
 function App() {
-  useEffect(()=>{
-    ReactGA.initialize('UA-183491336-1');//need to change when we create an actual website
+  /*  useEffect(() => {
+    ReactGA.initialize("UA-183491336-1"); //need to change when we create an actual website
     ReactGA.pageview(window.location.pathname + window.location.search);
-    
-    },[]);   
+  }, []); */
   return (
     <Router>
       <Switch>

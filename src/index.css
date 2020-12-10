@@ -39,7 +39,7 @@
   --main-dark: #0f0a0a;
   --light-grey: #f8f4f4;
   --inactive-grey: #959595;
-  --inactive-light-grey: #F4F4F4;
+  --inactive-light-grey: #f4f4f4;
 }
 
 .flex-column {
@@ -52,6 +52,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 50%;
+  height: 50%;
 }
 
 .shadow {

@@ -103,3 +103,31 @@
 .dirSmall {
   font-size: 45px;
 }
+
+@media only screen and (max-width: 850px) {
+  .directions {
+    grid-template-columns: 1fr;
+    height: 60vh;
+  }
+
+  .kickStartContainer {
+    height: 60vh;
+  }
+  .kickDefintion {
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .kickStartDef {
+    text-align: center;
+  }
+
+  .mapSVG {
+    order: 1;
+    display: none;
+  }
+  .newIdeasSVG {
+    display: none;
+  }
+}

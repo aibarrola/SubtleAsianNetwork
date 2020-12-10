@@ -1,13 +1,10 @@
 .navbar {
   background: rgba(0, 0, 255, 0);
 
-  overflow: hidden;
-
-  margin-top: 25px;
   font-size: 25px;
   display: flex;
   flex-direction: row;
-  height: 80px;
+  height: 60px;
   justify-content: space-between;
   align-items: center;
   padding: 0 100px;
@@ -17,16 +14,20 @@
 }
 
 .navbar.active {
-  background: var(--main-color);
+  /*  background: var(--main-color); */
+
+  background: #61d495ea;
   color: var(--main-dark);
 }
 
 .navTitle {
-  font-size: 30px;
+  font-size: 35px;
+  font-weight: bold;
   color: var(--main-color);
 }
 .navTitle.active {
   color: var(--main-dark);
+  font-size: 20px;
 }
 
 .navbar a {
@@ -47,10 +48,93 @@
   color: var(--main-dark);
   background-color: var(--main-color);
   border-radius: 20px; */
-  padding: 15px 60px;
+
+  /*  padding: 15px 60px;
+  font-weight: bold; */
+
+  border-radius: 15px;
+  padding: 20px 70px;
+  color: var(--main-dark);
+  background-color: var(--main-color);
+  border: 0px;
+  font-size: 20px;
   font-weight: bold;
 }
 
-.navSignUp .active {
-  background-color: (--main-white);
+.navSignUp.active {
+  background-color: white;
+  border-radius: 15px;
+  padding: 12px 35px;
+  font-size: 12px;
+  color: black;
+}
+
+.active {
+  font-size: 14px;
+}
+
+.navButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.profileOptions {
+  height: 28px;
+  width: 28px;
+
+  background-image: "url(`/SubtleAsianNetwork-/public/images/createProfile/profilepic.png`)";
+}
+
+.navDropDown {
+  position: absolute;
+  top: 48px;
+  width: 200px;
+  transform: translateX(-25%);
+  background-color: #40c87d;
+  border-color: white;
+  color: black;
+  border-radius: 8px;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.menu-item {
+  height: 50px;
+  color: black !important;
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+  transition: background 500ms;
+  padding: 0.5rem;
+}
+
+.menu-item:hover {
+  background-color: #27df79;
+  margin-left: auto;
+}
+
+.droptag {
+  color: black;
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 680px) {
+  .navbar {
+    background: var(--main-color);
+  }
+
+  .navTitle {
+    color: black;
+    justify-self: start;
+  }
+  .navButtons {
+    display: none;
+    visibility: hidden;
+  }
+  .navSignUp {
+    display: none;
+    color: black;
+  }
 }
