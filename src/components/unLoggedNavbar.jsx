@@ -4,7 +4,6 @@ import { useHistory } from "react-router-dom";
 import { getJwt } from "./Helpers/jwt";
 
 function UnloggedNav() {
-  /*   const [user, setUser] = useState(retrieved); */
   const [group, setGroup] = useState("");
   const [showNav, setNavBar] = useState(false);
   const [loggedInNav, setloggedIn] = useState(false);

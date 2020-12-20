@@ -1,12 +1,12 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import Axios from "axios";
-import { useHistory } from "react-router-dom";
+import { useHistory} from "react-router-dom";
 import { getJwt } from "./Helpers/jwt";
 import UnLoggedNav from "./unLoggedNavbar";
 import LoggedNav from "./loggedNav";
 
 function Navbar() {
-  /*  const [token, setToken] = useState();
+  const [token, setToken] = useState();
 
   let retrieved = localStorage.getItem("user");
   retrieved = JSON.parse(retrieved);
@@ -16,23 +16,23 @@ function Navbar() {
   const [showNav, setNavBar] = useState(false);
   const [loggedInNav, setloggedIn] = useState(false);
 
-  let history = useHistory(); */
+  let history = useHistory(); 
 
-  /*   useEffect(() => {
+   useEffect(() => {
+    if((localStorage.getItem('user') && localStorage.getItem('token'))){ 
+    setloggedIn(true);
     setToken(getJwt());
     Axios.get(`https://san-api.herokuapp.com/users/${user.user_id}`).then(
       (response) => {
         setUser(response.data);
         setGroup(response.data.group);
       }
-    );
-  }, []); */
+    );}
+  }, []); 
 
-  function logout() {
-    localStorage.clear();
-  }
+ 
 
-  /* const changeBackground = () => {
+   const changeBackground = () => {
     if (window.scrollY >= 100) {
       setNavBar(true);
     } else {
@@ -40,14 +40,16 @@ function Navbar() {
     }
   };
 
-  window.addEventListener("scroll", changeBackground); */
+  window.addEventListener("scroll", changeBackground); 
 
-  return (
-    <>
-      <LoggedNav />
-      {/* <UnLoggedNav /> */}
-    </>
-  );
+  if(loggedInNav){
+    return (
+      <LoggedNav user_id = {user._id} group = {group}/>
+      );
+  }else{
+    return (<UnLoggedNav/>);
+  }
+ 
 }
 
 export default Navbar;

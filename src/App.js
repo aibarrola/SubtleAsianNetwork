@@ -12,14 +12,14 @@ import EditProfile from "./components/pages/editProfile/editProfile";
 import GroupPage from "./components/pages/groupPage/groupPage";
 import ForgotPassword from "./components/pages/forgotPassword/ForgotPassword";
 import ResetPassword from "./components/pages/forgotPassword/ResetPassword";
-/* import ReactGA from 'react-ga'; */
+import ReactGA from 'react-ga'; 
 import Aboutpage from "./components/pages/aboutPage/about";
 
 function App() {
-  /*  useEffect(() => {
+  useEffect(() => {
     ReactGA.initialize("UA-183491336-1"); //need to change when we create an actual website
     ReactGA.pageview(window.location.pathname + window.location.search);
-  }, []); */
+  }, []); 
   return (
     <Router>
       <Switch>

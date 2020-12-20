@@ -3,7 +3,7 @@ import Footer from "../landing/footer/Footer";
 import "../aboutPage/about.css";
 import mapSVG from "./img/aboutMap.svg";
 import newIdeasSVG from "./img/newIdeas.svg";
-import Navbar from "../../navbar";
+import Navbar from "../../unLoggedNavbar"; 
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 

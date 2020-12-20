@@ -4,12 +4,11 @@ import DropDown from "./navDropDown";
 import { useHistory } from "react-router-dom";
 import { getJwt } from "./Helpers/jwt";
 
-function LoggedNav() {
-  /*   const [user, setUser] = useState(retrieved); */
+function LoggedNav({user_id, group}) {
   const [dropDown, setDrop] = useState(false);
-  const [group, setGroup] = useState("");
   const [showNav, setNavBar] = useState(false);
 
+  
   function logout() {
     localStorage.clear();
   }
@@ -29,17 +28,14 @@ function LoggedNav() {
       <small className="navTitle active"> Jade </small>
 
       <div className="navButtons">
-        <a href="Home " className="active">
+        <a href="home " className="active">
           Home
         </a>
         <a href="/networking" className="active">
           Networking
         </a>
-        <a href="/group" className="active">
+        <a href={`/group/${group}`}className="active">
           Group
-        </a>
-        <a href="/group" className="active">
-          About
         </a>
         <div
           className="profileOptions flexRowCenter circle"
@@ -50,11 +46,11 @@ function LoggedNav() {
             alt="Profile Default"
             className="profileOptions"
           />
-          {dropDown && <DropDown />}
+          {dropDown && <DropDown user_id = {user_id}/>}
         </div>
 
         {/*   <a href={`/group/${group}`}> Groups </a>
-        <a href={`/user/profile/${retrieved.user_id}`}> My Profile </a> */}
+        <a href={`/user/profile/${user_id}`}> My Profile </a> */}
       </div>
     </div>
   );
