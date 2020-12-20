@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./navbar.css";
+import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 import { getJwt } from "./Helpers/jwt";
 
@@ -28,11 +29,12 @@ function UnloggedNav() {
               Logout
             </a> */}
       {/*   <a href="/networking"> Networking </a> */}
-      <small className={showNav ? "navTitle active" : "navTitle "}>
-        {" "}
-        Jade{" "}
-      </small>
-
+      <Link to="/">
+        <small className={showNav ? "navTitle active" : "navTitle "}>
+          {" "}
+          Jade{" "}
+        </small>
+      </Link>
       <div className="navButtons">
         <a href="/login" className={showNav ? "active" : " "}>
           Login
@@ -41,12 +43,14 @@ function UnloggedNav() {
         <a href="/about" className={showNav ? "active" : " "}>
           About
         </a>
-        <button
-          href="/signup"
-          class={showNav ? "navSignUp active " : "navSignUp"}
-        >
-          Sign Up
-        </button>
+        <Link to="/signup">
+          <button
+            href="/signup"
+            class={showNav ? "navSignUp active " : "navSignUp"}
+          >
+            Sign Up
+          </button>
+        </Link>
         {/* <a href={`/group/${group}`}> Groups </a> */}
         {/*  <a href={`/user/profile/${retrieved.user_id}`}> My Profile </a> */}
 

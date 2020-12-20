@@ -25,7 +25,7 @@ function Todo({ todo, toggleComplete, removeToDo }) {
         </div>
       </div>
       <small className="taskName"> {todo.description} </small>
-      <small className="taskDate"> Due March 2nd </small>
+      <small className="taskDate"> Due March 2nd </small> 
       <FontAwesomeIcon
         icon={faTrash}
         className="trashIcon"
