@@ -23,7 +23,7 @@
     font-size:4vw;
     text-align:center;
     font-weight: 600;
-    color: var(--main-color);
+    color: var(--main-dark);
 }
 .login-email-field{
     width: 50%;
@@ -70,7 +70,8 @@
     cursor: pointer;
 }  
 .signin-btn:hover {
-    background-color: var(--btn-hover-color);
+    background-color: var(--accent-color);
+    color: var(--main-dark);
   }
 .forgetPassword-container{
     width:100%;
