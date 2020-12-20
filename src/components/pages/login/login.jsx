@@ -46,7 +46,7 @@ function Login(){
                     <input className = "login-input-field" type ="text" onChange={emailChange} value={email}/>
                     </div>
                     <div className = "login-password-field">
-                    <label className = "login-form-label">Password</label>
+                    <label className = "form-label">Password</label>
                     <input className = "login-input-field" type ="password" onChange={passChange} value={password}/>
                     </div>
                     <div className ="signIn-button-container">

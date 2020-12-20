@@ -35,13 +35,7 @@
     margin:auto;
     padding: 10px;
 }
-.login-form-label{
-    position: relative;
-    top: 10px;
-    left: 10px;
-    background-color: white;
-    width: 30%;
-}
+
 .login-input-field{
     width: 100%;
     outline: none;
@@ -58,7 +52,7 @@
     align-content: center;
   }
 .signin-btn{
-    background-color: var(--accent-color);
+    background-color: var(--main-color);
     color: white;
     border:none;
     font-size: 1.5rem;
@@ -70,7 +64,7 @@
     cursor: pointer;
 }  
 .signin-btn:hover {
-    background-color: var(--accent-color);
+    background-color: var(--main-color);
     color: var(--main-dark);
   }
 .forgetPassword-container{
@@ -110,4 +104,42 @@ a{
 
 .community-label{
     margin-right: 7px;
+}
+@media only screen and (max-width: 414px) {
+
+    .signUp-label-container{
+        visibility: hidden;
+    }
+    .signin-btn{
+        width: 80%;
+        font-size: 20px;
+    }
+    .login-email-field{
+        width: 100%;
+    }
+    .login-container{
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .login-password-field{
+        width: 100%;
+    }
+    .login-title{
+        font-size: 11vw;
+    }
+    .login-input-field{
+        height: 30px;
+        font-size: 0.9rem;
+    }
+    .signin-btn{
+        margin:15px;
+    }
+    .logIn{
+        background-image: url(/images/login/login-background-mobile.svg);
+        background-position: bottom;
+        background-size: 100%;
+        
+        
+    }
 }
