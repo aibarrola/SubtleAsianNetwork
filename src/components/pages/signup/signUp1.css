@@ -1,0 +1,138 @@
+.split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 100px;
+  }
+  
+ 
+  .left {
+    left: 0;
+    background-color: #83E9B1;
+  }
+  
+  .right {
+    right: 0;
+    background-color: #ffffff;
+  }
+  
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .signUp-container {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-items: center;
+  }
+  
+  .signUp-form {
+    width: 80%;
+    margin: auto;
+    height: 70%;
+  }
+  
+  .signUp-title {
+    font-size: 3.5vw;
+    text-align: center;
+    font-weight: 600;
+    /** font-size: 5rem;**/
+    color: var(--main-dark);
+  }
+  
+  .signUp-form-fields {
+    width: 70%;
+    margin: auto;
+    padding: 10px;
+  }
+  
+  .signUp-nameFields {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .form-label {
+    position: relative;
+    top: 0px;
+    left: 3px;
+    background-color: clear;
+    width: 50%;
+  }
+  
+  .signUp-form-fields div {
+    margin: 5px;
+  }
+  
+  .firstName-field {
+    width: 50%;
+    margin-right: 15px;
+  }
+  
+  .lastName-field {
+    width: 50%;
+  }
+  
+  .field {
+    width: 100%;
+    outline: none;
+    padding-left: 10px;
+    font-size: 1.2rem;
+    height: 50px;
+    border: 1px solid #96a3aa;
+    border-radius: 10px;
+  }
+  
+  .field-Error {
+    width: 100%;
+    outline: none;
+    padding-left: 10px;
+    font-size: 1.2rem;
+    height: 50px;
+    border: 1px solid red;
+    border-radius: 10px;
+  }
+  
+  .submit-btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  
+  .btn-register {
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    width: 50%;
+    margin: 30px;
+    padding: 20px 0;
+    border-radius: 18px;
+    transition: ease-in-out 0.3s;
+  }
+  
+  .btn-register:hover {
+    background-color: var(--accent-color);
+    color: var(--main-dark);
+  }
+  
+  h1 {
+    font-weight: 100;
+    font-size: 50px;
+  }
+  
+  .error {
+    color: #db2269;
+    font-size: 0.8rem;
+    display: relative;
+  }
+  
