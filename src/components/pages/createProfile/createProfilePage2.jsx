@@ -80,8 +80,9 @@ function CreateProfilePage1() {
           {/* To be changed later to be dynamic */}
           <h1 className="createProfile-name">{user.firstName} {user.lastName}</h1>
 
-          {/* Just the progress bar */}
-          <img src="/images/createProfile/ProgressBar2.svg" alt="" className="progressBar"/>
+          <div className="progressBar-container progressBar-2">
+            {/* Just the progress bar */}
+          </div>
         </div>
 
         <form className="createProfile-form" onSubmit={handleSubmit}>

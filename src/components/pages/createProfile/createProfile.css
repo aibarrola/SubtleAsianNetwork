@@ -50,8 +50,19 @@
   text-align: center;
 }
 
-.progressBar {
-  margin: 15px 0;
+.progressBar-1 {
+  background-image: url(/images/createProfile/ProgressBar1.svg);
+}
+
+.progressBar-2 {
+  background-image: url(/images/createProfile/ProgressBar2.svg);
+}
+
+.progressBar-container {
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 24px;
+  margin: 10px 0;
 }
 
 .createProfile-form {
