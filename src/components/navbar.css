@@ -1,76 +1,45 @@
 .navbar {
-  background: rgba(0, 0, 255, 0);
-
-  font-size: 15px;
-  display: flex;
-  flex-direction: row;
-  height: 60px;
-  justify-content: space-between;
   align-items: center;
-  padding: 0 100px;
-  position: sticky;
-  top: 0;
-  z-index: 999;
+  justify-content: center;
 }
 
-.navbar.active {
-  /*  background: var(--main-color); */
-
-  background: #61d495ea;
-  color: var(--main-dark);
+.nav-container {
+  display: flex;
+  margin: 5px 10%;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navTitle {
-  font-size: 25px;
-  font-weight: bold;
-  color: var(--main-color);
-}
-.navTitle.active {
-  color: var(--main-dark);
-  font-size: 20px;
+  /* Leave empty for now */
 }
 
-.navbar a {
+.nav-logo {
+  font-size: 24px;
+  color: var(--main-color);
+}
+
+.navButtons {
+  display: flex;
+  align-items: center;
+}
+
+.nav-btn {
+  margin: 0 10px;
+  color: var(--main-color);
+}
+
+.nav-btn:nth-last-child(1) {
+  margin-right: 0;
+  background-color: var(--main-color);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+
+/* .navbar a {
   margin-right: 20px;
   color: var(--main-color);
-}
-
-.navbar .active {
-  color: black;
-}
-
-/* .navbar a:hover {
-  background-color: white;
-} */
-
-.navSignUp {
-  /*  width: 10%;
-  color: var(--main-dark);
-  background-color: var(--main-color);
-  border-radius: 20px; */
-
-  /*  padding: 15px 60px;
-  font-weight: bold; */
-
-  border-radius: 15px;
-  padding: 14px 55px;
-  color: var(--main-dark);
-  background-color: var(--main-color);
-  border: 0px;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.navSignUp.active {
-  background-color: white;
-  border-radius: 15px;
-  padding: 12px 35px;
-  font-size: 12px;
-  color: black;
-}
-
-.active {
-  font-size: 14px;
 }
 
 .navButtons {
@@ -119,7 +88,7 @@
 .droptag {
   color: black;
   font-size: 20px;
-}
+} */
 
 @media only screen and (max-width: 680px) {
   .navbar {

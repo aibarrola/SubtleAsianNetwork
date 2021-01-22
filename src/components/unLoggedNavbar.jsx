@@ -25,37 +25,28 @@ function UnloggedNav() {
 
   return (
     <div class={showNav ? "navbar active" : "navbar"}>
-      {/*  <a href="/" onClick={logout}>
-              Logout
-            </a> */}
-      {/*   <a href="/networking"> Networking </a> */}
-      <Link to="/">
-        <small className={showNav ? "navTitle active" : "navTitle "}>
-          {" "}
-          Jade{" "}
-        </small>
-      </Link>
-      <div className="navButtons">
-        <a href="/login" className={showNav ? "active" : " "}>
-          Login
-        </a>
-        {/*  <span className={showNav ? "active" : " "}> | </span> */}
-        <a href="/about" className={showNav ? "active" : " "}>
-          About
-        </a>
-        <Link to="/signup">
-          <button
-            href="/signup"
-            class={showNav ? "navSignUp active " : "navSignUp"}
-          >
-            Sign Up
-          </button>
-        </Link>
-        {/* <a href={`/group/${group}`}> Groups </a> */}
-        {/*  <a href={`/user/profile/${retrieved.user_id}`}> My Profile </a> */}
 
-        {/* <a href="Home"> Home </a> */}
+      <div className="nav-container">
+
+        <div className="navTitle">
+          <Link to="/" className="nav-logo">
+            Jade
+          </Link>
+        </div>
+        <div className="navButtons">
+          <Link to="/about" className="nav-btn">
+            About
+          </Link>
+          <Link to="/login" className="nav-btn">
+            Login
+          </Link>
+          <Link to="/signup" className=" nav-btn">
+            Signup
+          </Link>
+        </div>
+
       </div>
+      
     </div>
   );
 }
