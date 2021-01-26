@@ -1,6 +1,6 @@
 .connect-container {
   min-height: 75vh;
-  background-color: var(--light-grey);
+  background-color: var(--main-grey);
   display: flex;
   align-items: center;
 }
