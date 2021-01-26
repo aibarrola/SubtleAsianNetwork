@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./navbar.css";
-import DropDown from "./navDropDown";
 import { useHistory } from "react-router-dom";
 import { getJwt } from "./Helpers/jwt";
 
@@ -46,7 +45,6 @@ function LoggedNav({user_id, group}) {
             alt="Profile Default"
             className="profileOptions"
           />
-          {dropDown && <DropDown user_id = {user_id}/>}
         </div>
 
         {/*   <a href={`/group/${group}`}> Groups </a>

@@ -4,7 +4,6 @@ import Axios from "axios";
 import "./profile.css";
 import "../../baseGrid.css";
 import Navbar from "../../navbar";
-import Sidebar from "../../sidebar";
 
 import { getJwt } from "../../Helpers/jwt";
 
