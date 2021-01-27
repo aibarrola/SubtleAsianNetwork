@@ -54,7 +54,7 @@ function LandingRevise() {
               </p>
             </div>
             <div className="btn-container">
-              <Link to="/signup">
+              <Link to="/signup1">
                 <button className="BTNsignUp"> Join now </button>
               </Link>
 
