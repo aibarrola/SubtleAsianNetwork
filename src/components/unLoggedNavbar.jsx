@@ -40,8 +40,8 @@ function UnloggedNav() {
           <Link to="/login" className="nav-btn">
             Login
           </Link>
-          <Link to="/signup" className=" nav-btn">
-            Signup
+          <Link to="/signup1" className=" nav-btn">
+            Sign Up
           </Link>
         </div>
 
