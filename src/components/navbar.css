@@ -32,7 +32,7 @@
 .nav-btn:nth-last-child(1) {
   margin-right: 0;
   background-color: var(--main-color);
-  color: white;
+  color: var(--main-dark);
   padding: 10px 15px;
   border-radius: 10px;
 }
