@@ -99,7 +99,7 @@ class SignUp extends React.Component {
     return (
       <div className="split right">
           <form action="" className="signUp-form" onSubmit={this.handleSubmit}>
-            <h1 className="signUp-title">Project Member</h1>
+            <h1 className="signUp-title">Project Leader</h1>
             <div className="signUp-form-fields">
               <div className="signUp-nameFields">
                 <div className="firstName-field flex-column">
@@ -207,7 +207,7 @@ class SignUp extends React.Component {
           
         <div className="split left">
         <div className="centered">
-        <h1 className="signUp-title">Project Leader</h1>
+        <h1 className="signUp-title">Project Member</h1>
         <Link to="/signup">
         <div className="submit-btn-container">
                 <input
