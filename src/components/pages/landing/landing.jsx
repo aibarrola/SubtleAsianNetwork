@@ -21,15 +21,16 @@ function LandingRevise() {
 
   let history = useHistory();
 
-  useEffect(() => {
-    if (localStorage.getItem('user') && localStorage.getItem('token') ) {
-      let retreived = localStorage.getItem('user');
-      retreived = JSON.parse(retreived);
-      setUser(retreived.user_id);
-      setToken(getJwt());
-      setRedirect(true);
-    }
-  }, [])
+  // useEffect(() => {
+  //   if (localStorage.getItem('user') && localStorage.getItem('token') ) {
+  //     let retreived = localStorage.getItem('user');
+  //     retreived = JSON.parse(retreived);
+  //     setUser(retreived.user_id);
+  //     setToken(getJwt());
+  //     setRedirect(true);
+  //   }
+  // }, [])
+
   if (redirect) {
     history.push(`/user/profile/${user}`);
     setRedirect(false);

@@ -24,7 +24,7 @@ function UnloggedNav() {
   window.addEventListener("scroll", changeBackground);
 
   return (
-    <div class={showNav ? "navbar active" : "navbar"}>
+    <div className={showNav ? "navbar active" : "navbar"}>
 
       <div className="nav-container">
 

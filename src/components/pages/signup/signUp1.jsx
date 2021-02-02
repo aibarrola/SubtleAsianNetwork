@@ -13,7 +13,7 @@ const validEmailRegex = RegExp(
   /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
 );
 
-class SignUp extends React.Component {
+class SignUp1 extends React.Component {
   constructor(props) {
     super(props);
     this.state = {

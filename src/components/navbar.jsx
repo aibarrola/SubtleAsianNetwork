@@ -28,7 +28,7 @@ function Navbar() {
         setGroup(response.data.group);
       }
     );}
-  }, []); 
+  }); 
 
  
 

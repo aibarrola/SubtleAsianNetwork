@@ -14,6 +14,7 @@ import ForgotPassword from "./components/pages/forgotPassword/ForgotPassword";
 import ResetPassword from "./components/pages/forgotPassword/ResetPassword";
 import ReactGA from 'react-ga'; 
 import Aboutpage from "./components/pages/aboutPage/about";
+import SignUpOne from './components/pages/signup/signUp1';
 
 function App() {
   useEffect(() => {
@@ -26,8 +27,11 @@ function App() {
         <Route exact path="/">
           <Landing />
         </Route>
-        <Route path="/signup">
+        <Route exact path="/signup">
           <SignUp />
+        </Route>
+        <Route exact path="/signup1">
+          <SignUpOne />
         </Route>
         <Route path="/login">
           <LogIn />
