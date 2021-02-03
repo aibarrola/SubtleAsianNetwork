@@ -15,23 +15,14 @@ function Profile() {
   let { id } = useParams();
 
   useEffect(() => {
-    Axios.get(`https://san-api.herokuapp.com/users/${id}`).then((response) => {
-      setUser(response.data);
-      Axios.get(`https://san-api.herokuapp.com/groups/${response.data.group}`).then((response) => {
-        setGroup(response.data.groupName);
+    Axios.get(`https://san-api.herokuapp.com/users/${id}`).then(res => {
+      setUser(res.data);
+      Axios.get(`https://san-api.herokuapp.com/groups/${res.data.group}`).then(resGroup => {
+        // setGroup(response.data.groupName);
+        // console.log(res)
       });
     });
-
-   
-
-
-    
-
-  }, []);
-
-
-  console.log(group); //no output it is blank
-  console.log(user);
+  });
 
   return (
     <section>

@@ -45,21 +45,6 @@ class SignUp1 extends React.Component {
 
       console.log('Test New Page');
 
-      // Axios.post("http://localhost:5000/users/register", user)
-      // Axios.post("https://san-api.herokuapp.com/users/register", user)
-      //   .then((res) => {
-      //     localStorage.setItem("token", res.data.token);
-      //     localStorage.setItem("user", JSON.stringify(res.data.user));
-      //     this.props.history.push(`/user/${res.data.user.user_id}/cp/1`);
-      //   })
-      //   .catch((err) => {
-      //     if (err.response.data.msg === "User already exist") {
-      //       this.setState({ emailCheckDouble: "Email already exists" });
-      //     } else {
-      //       console.log(err);
-      //     }
-      //   });
-
       Axios.post("https://san-api.herokuapp.com/users/register", user)
         .then( res => {
           localStorage.setItem("token", res.data.token);
