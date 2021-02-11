@@ -1,6 +1,11 @@
+// React depencies for app to work
 import React, { useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+// Import master css
 import "./App.css";
+
+// Import components
 import Landing from "./components/pages/landing/landing";
 import SignUp from "./components/pages/signup/signUp";
 import Profile from "./components/pages/Profile/profile";
@@ -16,12 +21,14 @@ import ReactGA from 'react-ga';
 import Aboutpage from "./components/pages/aboutPage/about";
 import SignUpOne from './components/pages/signup/signUp1';
 
+
 function App() {
   useEffect(() => {
     ReactGA.initialize("UA-183491336-1"); //need to change when we create an actual website
     ReactGA.pageview(window.location.pathname + window.location.search);
   }, []); 
   return (
+    // Routes for website
     <Router>
       <Switch>
         <Route exact path="/">
