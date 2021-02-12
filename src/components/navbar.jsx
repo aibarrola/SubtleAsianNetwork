@@ -7,17 +7,17 @@ import LoggedNav from "./loggedNav";
 
 function Navbar() {
 
+  // Retrieve user information from local storage
+  let retrieved = localStorage.getItem("user");
+  // Turn single line of text into usable JSON
+  retrieved = JSON.parse(retrieved);
+
   // React hooks to store values and states
   const [token, setToken] = useState();
   const [user, setUser] = useState(retrieved);
   const [group, setGroup] = useState("");
   const [showNav, setNavBar] = useState(false);
   const [loggedInNav, setloggedIn] = useState(false);
-
-  // Retrieve user information from local storage
-  let retrieved = localStorage.getItem("user");
-  // Turn single line of text into usable JSON
-  retrieved = JSON.parse(retrieved);
 
   // History hook for use of page redirection
   let history = useHistory(); 
