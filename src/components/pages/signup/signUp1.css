@@ -17,6 +17,7 @@
   .right {
     right: 0;
     background-color: #ffffff;
+    
   }
   
   .centered {
@@ -42,7 +43,7 @@
   }
   
   .signUp-title {
-    font-size: 3.5vw;
+    font-size: 3.2vw;
     text-align: center;
     font-weight: 600;
     /** font-size: 5rem;**/
