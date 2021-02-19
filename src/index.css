@@ -43,6 +43,9 @@
   
   --background-grey: #F4F6FA;
   --border-grey: #CACDD3;
+
+  --field-border-grey: #CACDD3;
+  --field-placeholder-grey: #E1E2E4;
 }
 
 .flex-column {
