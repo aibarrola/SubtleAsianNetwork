@@ -36,10 +36,13 @@
   --main-white: #ffffff;
   --main-grey: #F4F6FA;
   --secondary-grey: #546a7b;
-  --main-dark: #0f0a0a;
+  --main-dark: #0f0a0a; 
   --light-grey: #f8f4f4;
   --inactive-grey: #959595;
   --inactive-light-grey: #f4f4f4;
+  
+  --background-grey: #F4F6FA;
+  --border-grey: #CACDD3;
 }
 
 .flex-column {
