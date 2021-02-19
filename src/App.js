@@ -20,6 +20,7 @@ import ResetPassword from "./components/pages/forgotPassword/ResetPassword";
 import ReactGA from 'react-ga'; 
 import Aboutpage from "./components/pages/aboutPage/about";
 import SignUpOne from './components/pages/signup/signUp1';
+import SignUpTwo from './components/pages/signup/signUp2';
 
 
 function App() {
@@ -39,6 +40,9 @@ function App() {
         </Route>
         <Route exact path="/signup1">
           <SignUpOne />
+        </Route>
+        <Route exact path="/signup2">
+          <SignUpTwo />
         </Route>
         <Route path="/login">
           <LogIn />
