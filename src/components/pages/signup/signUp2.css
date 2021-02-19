@@ -1,0 +1,157 @@
+.register {
+  height: 100vh;
+  background-color: var(--background-grey);
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.register-container {
+  width: 65%;
+  margin: auto auto;
+  background-color: white;
+  border-radius: 5px;
+}
+
+/* Sign Up Content Container */
+/* Used to create a margin within white box */
+.register-content-container {
+  margin: 2.5% 5%;
+}
+
+/* Top portion of sign up container */
+.top-signup {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: var(--border-grey);
+  font-size: 12px;
+}
+
+.top-signup-caption {
+  margin: 0 10px;
+}
+
+.top-signin-button {
+  border: 1px solid var(--border-grey);
+  color: var(--border-grey);
+  padding: 5px 7px;
+  border-radius: 12px;
+}
+
+/* Split Signup Section */
+.split-signup {
+  display: flex;
+  margin: 5% 0;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10%;
+}
+
+.signUp-img-container {
+  height: 100%;
+  width: 60%;
+}
+
+.signUp-img {
+  width: 90%;
+}
+
+.signUp-form-container {
+  width: 40%;
+}
+
+.logo-container {
+  align-content: center;
+  display: flex;
+  margin: 5% 0 3% 0;
+  align-items: center;
+}
+
+.logo-img {
+  height: 100%;
+}
+
+.logo-caption {
+  color: var(--main-color);
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  margin-left: 2px;
+  font-weight: 700;
+}
+
+.signUp-caption-container {
+  margin-bottom: 5%;
+}
+
+.signUp-caption {
+  color: black;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.signUp-subcaption {
+  color: var(--inactive-grey);
+  margin-top: 1%;
+  font-size: 12px;
+}
+
+/* SignUp Form Section */
+.signUp-form {
+  width: 100%;
+}
+
+.signUp-form-section-container {
+  margin-bottom: 5%;
+  display: flex;
+  flex-direction: column;
+}
+
+.signUp-form-field-label {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.signUp-form-name-fields {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2%;
+}
+
+.signUp-form-name-field {
+  border: 1px solid var(--field-border-grey);
+  border-radius: 5px;
+  width: 48%; 
+  height: 30px;
+}
+
+.signUp-form-name-field::placeholder {
+  padding-left: 5%;
+  color: var(--field-placeholder-grey);
+}
+
+/* Email Field Section */
+.signUp-form-field {
+  border: 1px solid var(--field-border-grey);
+  border-radius: 5px;
+  width: 100%;
+  height: 30px;
+}
+
+.signUp-form-field::placeholder {
+  padding-left: 2.5%;
+  color: var(--field-placeholder-grey);
+
+}
+
+/* Submit Button */
+.signUp-form-submit-btn {
+  width: 100%;
+  border: none;
+  background-color: var(--main-color);
+  color: white;
+  padding: 3% 0;
+  border-radius: 5px;
+  margin-top: 7%;
+}
