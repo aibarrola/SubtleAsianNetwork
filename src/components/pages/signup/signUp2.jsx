@@ -1,7 +1,6 @@
-import React, {useEffect, useState} from 'react'
+import React, {useState} from 'react'
 import "./signUp2.css";
 import Axios from 'axios';
-// import { withRouter } from 'react-router-dom';
 import { Link, useHistory } from 'react-router-dom';
 
 function CreateProfilePage2() {
