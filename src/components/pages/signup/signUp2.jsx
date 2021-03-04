@@ -42,10 +42,25 @@ function CreateProfilePage2() {
         break;
       case "password":
         setPassword(value); // Set password to value of field
+
+        // Check password with confirm password, if the same -> set error to false
+        // Used to keep error checking working if the user for some reason does confirm password first
+        if (value === confirmPassword) {
+          setPasswordError(false);
+        } else {
+          setPasswordError(true);
+        }
         break;
       case "confirmPassword":
         setConfirmPassword(value);
-        setPasswordError(true);
+
+        // When confirm password starts to change immediately check if it's the same
+        // Also activates the error for real time checking
+        if (password !== value) { // If password is not the same as confirm password, set error to true
+          setPasswordError(true);
+        } else {                  // If password is the same as confirm password, set error to false
+          setPasswordError(false);
+        }
         break;
       default:
         // No default
@@ -145,7 +160,7 @@ function CreateProfilePage2() {
                   <input type="password" name="confirmPassword" placeholder="8+ characters" className="signUp-form-field" required value={confirmPassword} onChange={handleChange}/>
                 </div>
 
-                {password !== confirmPassword ? 
+                {passwordError ? 
                   <div className="signUp-error-active">
                     <p className="signUp-error-text">Passwords don't match</p>
                   </div>

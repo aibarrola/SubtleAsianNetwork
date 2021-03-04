@@ -7,7 +7,6 @@ import "./App.css";
 
 // Import components
 import Landing from "./components/pages/landing/landing";
-import SignUp from "./components/pages/signup/signUp";
 import Profile from "./components/pages/Profile/profile";
 import CreateProfilePage1 from "./components/pages/createProfile/createProfilePage1";
 import Networking from "./components/pages/Networking/networking";
@@ -19,7 +18,6 @@ import ForgotPassword from "./components/pages/forgotPassword/ForgotPassword";
 import ResetPassword from "./components/pages/forgotPassword/ResetPassword";
 import ReactGA from 'react-ga'; 
 import Aboutpage from "./components/pages/aboutPage/about";
-import SignUpOne from './components/pages/signup/signUp1';
 import SignUpTwo from './components/pages/signup/signUp2';
 
 
@@ -36,12 +34,6 @@ function App() {
           <Landing />
         </Route>
         <Route exact path="/signup">
-          <SignUp />
-        </Route>
-        <Route exact path="/signup1">
-          <SignUpOne />
-        </Route>
-        <Route exact path="/signup2">
           <SignUpTwo />
         </Route>
         <Route path="/login">

@@ -55,13 +55,9 @@ function LandingRevise() {
               </p>
             </div>
             <div className="btn-container">
-              <Link to="/signup1">
+              <Link to="/signup">
                 <button className="BTNsignUp"> Join now </button>
               </Link>
-
-              {/*  <Link to="/login">
-                <button className="BTNlogIn"> Log In </button>
-              </Link> */}
             </div>
           </div>
           <div className="hero-img">
