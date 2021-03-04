@@ -1,117 +1,175 @@
-.signUp {
+.register {
   height: 100vh;
-  background-image: url(/images/signup/signup-bg.svg);
-  background-size: 90%;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-}
-
-.signUp-container {
-  width: 60%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-items: center;
-}
-
-.signUp-form {
-  width: 80%;
-  margin: auto;
-  height: 70%;
-}
-
-.signUp-title {
-  font-size: 4vw;
-  text-align: center;
-  font-weight: 600;
-  /** font-size: 5rem;**/
-  color: var(--main-dark);
-}
-
-.signUp-form-fields {
-  width: 70%;
-  margin: auto;
-  padding: 10px;
-}
-
-.signUp-nameFields {
-  display: flex;
-  justify-content: space-between;
-}
-
-.form-label {
-  position: relative;
-  top: 0px;
-  left: 3px;
-  background-color: clear;
-  width: 50%;
-}
-
-.signUp-form-fields div {
-  margin: 5px;
-}
-
-.firstName-field {
-  width: 50%;
-  margin-right: 15px;
-}
-
-.lastName-field {
-  width: 50%;
-}
-
-.field {
-  width: 100%;
-  outline: none;
-  padding-left: 10px;
-  font-size: 1.2rem;
-  height: 50px;
-  border: 1px solid #96a3aa;
-  border-radius: 10px;
-}
-
-.field-Error {
-  width: 100%;
-  outline: none;
-  padding-left: 10px;
-  font-size: 1.2rem;
-  height: 50px;
-  border: 1px solid red;
-  border-radius: 10px;
-}
-
-.submit-btn-container {
-  width: 100%;
+  background-color: var(--background-grey);
   display: flex;
   justify-content: center;
-  align-content: center;
+  box-sizing: border-box;
 }
 
-.btn-register {
+.register-container {
+  width: 65%;
+  margin: auto auto;
+  background-color: white;
+  border-radius: 5px;
+}
+
+/* Sign Up Content Container */
+/* Used to create a margin within white box */
+.register-content-container {
+  margin: 2.5% 5%;
+}
+
+/* Top portion of sign up container */
+.top-signup {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: var(--border-grey);
+  font-size: 12px;
+}
+
+.top-signup-caption {
+  margin: 0 10px;
+}
+
+.top-signin-button {
+  border: 1px solid var(--border-grey);
+  color: var(--border-grey);
+  padding: 5px 7px;
+  border-radius: 12px;
+}
+
+/* Split Signup Section */
+.split-signup {
+  display: flex;
+  margin: 5% 0;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10%;
+}
+
+.signUp-img-container {
+  height: 100%;
+  width: 60%;
+}
+
+.signUp-img {
+  width: 90%;
+}
+
+.signUp-form-container {
+  width: 40%;
+}
+
+.logo-container {
+  align-content: center;
+  display: flex;
+  margin: 5% 0 3% 0;
+  align-items: center;
+}
+
+.logo-img {
+  height: 100%;
+}
+
+.logo-caption {
+  color: var(--main-color);
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  margin-left: 2px;
+  font-weight: 700;
+}
+
+.signUp-caption-container {
+  margin-bottom: 5%;
+}
+
+.signUp-caption {
+  color: black;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.signUp-subcaption {
+  color: var(--inactive-grey);
+  margin-top: 1%;
+  font-size: 12px;
+}
+
+/* SignUp Form Section */
+.signUp-form {
+  width: 100%;
+}
+
+.signUp-form-section-container {
+  margin-bottom: 5%;
+  display: flex;
+  flex-direction: column;
+}
+
+.signUp-form-field-label {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.signUp-form-name-fields {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2%;
+}
+
+.signUp-form-name-field {
+  border: 1px solid var(--field-border-grey);
+  border-radius: 5px;
+  width: 48%; 
+  height: 30px;
+  padding-left: 2.5%;
+}
+
+.signUp-form-name-field::placeholder {
+  padding-left: 5%;
+  color: var(--field-placeholder-grey);
+}
+
+/* Email Field Section */
+.signUp-form-field {
+  border: 1px solid var(--field-border-grey);
+  border-radius: 5px;
+  width: 100%;
+  height: 30px;
+  padding-left: 2.5%;
+  margin-top: 5px;
+}
+
+.signUp-form-field::placeholder {
+  padding-left: 2.5%;
+  color: var(--field-placeholder-grey);
+
+}
+
+/* Submit Button */
+.signUp-form-submit-btn {
+  width: 100%;
+  border: none;
   background-color: var(--main-color);
   color: white;
-  border: none;
-  font-size: 1.5rem;
-  width: 50%;
-  margin: 30px;
-  padding: 20px 0;
-  border-radius: 18px;
-  transition: ease-in-out 0.3s;
+  padding: 3% 0;
+  border-radius: 5px;
+  margin-top: 7%;
 }
 
-.btn-register:hover {
-  background-color: var(--accent-color);
-  color: var(--main-dark);
-}
-h1 {
-  font-weight: 100;
-  font-size: 50px;
+/* Error Styling */
+.signUp-error-active {
+  display: block;
 }
 
-.error {
-  color: #db2269;
-  font-size: 0.8rem;
-  display: relative;
+.signUp-error-text {
+  color: red;
+  font-size: 12px;
+}
+
+.signUp-error-text-inactive {
+  color: transparent;
+  font-size: 12px;
 }

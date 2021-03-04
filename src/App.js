@@ -18,7 +18,7 @@ import ForgotPassword from "./components/pages/forgotPassword/ForgotPassword";
 import ResetPassword from "./components/pages/forgotPassword/ResetPassword";
 import ReactGA from 'react-ga'; 
 import Aboutpage from "./components/pages/aboutPage/about";
-import SignUpTwo from './components/pages/signup/signUp2';
+import SignUp from './components/pages/signup/signUp';
 
 
 function App() {
@@ -34,7 +34,7 @@ function App() {
           <Landing />
         </Route>
         <Route exact path="/signup">
-          <SignUpTwo />
+          <SignUp />
         </Route>
         <Route path="/login">
           <LogIn />
