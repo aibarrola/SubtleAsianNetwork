@@ -10,6 +10,12 @@ function CreateProfilePage2() {
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+
+  // Error hooks
+  const [nameError, setNameError] = useState(false);
+  const [emailError, setEmailError] = useState(false);
+  const [passwordError, setPasswordError] = useState(false);
 
   // history is used for redirection of webpages
   // Going to be used once the user hits submit
@@ -37,10 +43,16 @@ function CreateProfilePage2() {
       case "password":
         setPassword(value); // Set password to value of field
         break;
+      case "confirmPassword":
+        setConfirmPassword(value);
+        setPasswordError(true);
+        break;
       default:
         // No default
     }
   }
+
+  console.log(passwordError);
 
   // Handle submit button
   function handleSubmit(e) {
@@ -127,6 +139,22 @@ function CreateProfilePage2() {
                   <label className="signUp-form-field-label">Password</label>
                   <input type="password" name="password" placeholder="8+ characters" className="signUp-form-field" required value={password} onChange={handleChange}/>
                 </div>
+
+                <div className="signUp-form-section-container">
+                  <label className="signUp-form-field-label">Confirm Password</label>
+                  <input type="password" name="confirmPassword" placeholder="8+ characters" className="signUp-form-field" required value={confirmPassword} onChange={handleChange}/>
+                </div>
+
+                {password !== confirmPassword ? 
+                  <div className="signUp-error-active">
+                    <p className="signUp-error-text">Passwords don't match</p>
+                  </div>
+                  :
+                  <div className="signUp-error-inactive">
+                    <p className="signUp-error-text-inactive">Blank</p>
+                  </div>
+                }
+
                 {/* End Signup password field */}
 
                 {/* Signup Submit Button */}
