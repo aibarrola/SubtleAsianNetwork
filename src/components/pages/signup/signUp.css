@@ -162,6 +162,7 @@
 /* Error Styling */
 .signUp-error-active {
   display: block;
+  margin-bottom: 5px;
 }
 
 .signUp-error-text {
@@ -172,4 +173,5 @@
 .signUp-error-text-inactive {
   color: transparent;
   font-size: 12px;
+  margin-bottom: 5px;
 }
