@@ -19,6 +19,7 @@ import ResetPassword from "./components/pages/forgotPassword/ResetPassword";
 import ReactGA from 'react-ga'; 
 import Aboutpage from "./components/pages/aboutPage/about";
 import SignUp from './components/pages/signup/signUp';
+import CreateCohort from './components/pages/cohort/createCohort';
 
 
 function App() {
@@ -38,6 +39,9 @@ function App() {
         </Route>
         <Route path="/login">
           <LogIn />
+        </Route>
+        <Route path="/createcohort">
+          <CreateCohort />
         </Route>
         <Route path="/forgotpassword">
           <ForgotPassword />
