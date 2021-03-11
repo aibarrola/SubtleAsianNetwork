@@ -1,0 +1,57 @@
+.createCohort {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.createCohort-container {
+  width: 500px;
+}
+
+.createCohort-title {
+  font-weight: 600;
+}
+
+.createCohort-form-field {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+  margin: 20px 0;
+}
+
+.createCohort-field-label {
+  display: flex;
+  justify-content: space-between;
+}
+
+.createCohort-field-required {
+  color: red;
+}
+
+.createCohort-field-input {
+  height: 35px;
+  border-radius: 6px;
+  border: 1px solid var(--border-grey);
+  padding-left: 1%;
+  margin: 5px 0;
+}
+
+.createCohort-form-submit-btn-container {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 25px;
+}
+
+.createCohort-form-submit-btn {
+  padding: 12px 17px;
+  border-radius: 6px;
+  border: none;
+  background-color: var(--main-color);
+  color: white;
+}
+
+.createCohort-form-submit-btn:hover {
+  background-color: var(--main-color-hover);
+}
