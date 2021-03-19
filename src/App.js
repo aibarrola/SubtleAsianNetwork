@@ -40,7 +40,7 @@ function App() {
         <Route path="/login">
           <LogIn />
         </Route>
-        <Route path="/createcohort">
+        <Route path="/createcohort/:id">
           <CreateCohort />
         </Route>
         <Route path="/forgotpassword">

@@ -1,11 +1,24 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import Axios from 'axios';
+import {useParams} from 'react-router-dom';
 import './createCohort.css';
+
+// Helpers
+import { getJwt } from "../../Helpers/jwt";
 
 function CreateCohort() {
 
   const [cohortName, setCohortName] = useState('');
   const [cohortSchool, setCohortSchool] = useState('');
   const [cohortOrg, setCohortOrg] = useState('');
+  const [token, setToken] = useState();
+
+  // Get user id from the parameters
+  let {id} = useParams();
+
+  useEffect(() => {
+    setToken(getJwt());
+  }, [])
 
   function handleChange(e) {
     const {name, value} = e.target;
@@ -23,6 +36,19 @@ function CreateCohort() {
       default:
         // No default
     }
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault(e);
+
+    const newCohort = {
+      cohortName,
+      cohortSchool,
+      cohortOrg,
+      adminUser: id
+    }
+
+    Axios.post()
   }
 
   return (
