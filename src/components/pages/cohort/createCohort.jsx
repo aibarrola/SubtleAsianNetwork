@@ -41,6 +41,10 @@ function CreateCohort() {
   function handleSubmit(e) {
     e.preventDefault(e);
 
+    let config = {
+      'x-auth-token': getJwt()
+    }
+
     const newCohort = {
       cohortName,
       cohortSchool,
@@ -48,9 +52,10 @@ function CreateCohort() {
       adminUser: id
     }
 
-    Axios.post(`https://san-api.herokuapp.com/cohorts`, newCohort)
+    Axios.post(`https://san-api.herokuapp.com/cohorts`, newCohort, config)
       .then (res => {
         console.log(res);
+        window.location.assign(`/user/profile/${id}`);
       })
       .catch(err => {
         console.log(err);
