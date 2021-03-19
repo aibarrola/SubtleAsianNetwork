@@ -48,7 +48,13 @@ function CreateCohort() {
       adminUser: id
     }
 
-    Axios.post()
+    Axios.post(`https://san-api.herokuapp.com/cohorts`, newCohort)
+      .then (res => {
+        console.log(res);
+      })
+      .catch(err => {
+        console.log(err);
+      })
   }
 
   return (
@@ -59,7 +65,7 @@ function CreateCohort() {
         </div>
 
         {/* Create Cohort Form Container */}
-        <form className="createCohort-form">
+        <form className="createCohort-form" onSubmit={handleSubmit}>
 
           {/* Cohort Name Field */}
           <div className="createCohort-form-field">

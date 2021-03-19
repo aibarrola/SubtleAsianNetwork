@@ -9,13 +9,10 @@ function CreateProfilePage2() {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
-  const [confirmEmail, setConfirmEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
 
   // Error hooks
-  const [emailMatch, setEmailMatch] = useState(false);
-  const [emailError, setEmailError] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
 
   // history is used for redirection of webpages
@@ -40,19 +37,6 @@ function CreateProfilePage2() {
         break;
       case "email":
         setEmail(value);    // Set email to value of field
-        if (value === confirmEmail) {
-          setEmailError(false);
-        } else {
-          setEmailError(true);
-        }
-        break;
-      case "confirmEmail":
-        setConfirmEmail(value);
-        if (value === email) {
-          setEmailError(false);
-        } else {
-          setEmailError(true);
-        }
         break;
       case "password":
         setPassword(value); // Set password to value of field
@@ -98,7 +82,7 @@ function CreateProfilePage2() {
       .then(res => {
         localStorage.setItem('token', res.data.token);
         localStorage.setItem('user', JSON.stringify(res.data.newRegUser));
-        history.push(`user/${res.data.newRegUser.user_id}/cp/1`);
+        history.push(`/${res.data.newRegUser.user_id}/createcohort/`);
       })
       .catch(err => {
         console.log(err);
@@ -159,21 +143,6 @@ function CreateProfilePage2() {
                   <label className="signUp-form-field-label">Email</label>
                   <input type="email" name="email" placeholder="angelo_is_sexy@gmail.com" className="signUp-form-field" required value={email} onChange={handleChange}/>
                 </div>
-
-                <div className="signUp-form-section-container">
-                  <label className="signUp-form-field-label">Confirm Email</label>
-                  <input type="email" name="confirmEmail" placeholder="Confirm Email" className="signUp-form-field" required value={confirmEmail} onChange={handleChange}/>
-                </div>
-
-                {emailError ? 
-                  <div className="signUp-error-active">
-                    <p className="signUp-error-text">Emails don't match</p>
-                  </div>
-                  :
-                  <div className="signUp-error-inactive">
-                    <p className="signUp-error-text-inactive">Blank</p>
-                  </div>
-                }
                 {/* End Signup email field */}
 
                 {/* Signup password field */}
