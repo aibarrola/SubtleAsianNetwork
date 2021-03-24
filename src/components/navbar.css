@@ -5,7 +5,7 @@
 
 .nav-container {
   display: flex;
-  margin: 5px 10%;
+  margin: 25px 10%;
   justify-content: space-between;
   align-items: center;
 }
@@ -18,6 +18,13 @@
   font-size: 24px;
   color: var(--main-color);
 }
+
+.logo {
+  width: 28px;
+  height: auto;
+  vertical-align: middle;
+}
+
 
 .navButtons {
   display: flex;
@@ -32,8 +39,8 @@
 .nav-btn:nth-last-child(1) {
   margin-right: 0;
   background-color: var(--main-color);
-  color: var(--main-dark);
-  padding: 10px 15px;
+  color: var(--main-white);
+  padding: 9px 45px;
   border-radius: 10px;
 }
 
