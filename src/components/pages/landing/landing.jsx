@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import { Link, useHistory } from "react-router-dom";
 
 import logo from "./logo.png";
-import mainSVG from "./landingMain.png";
+import mainSVG from "./landingMain.svg";
 
 import "./landing.css";
 
@@ -46,18 +46,17 @@ function LandingRevise() {
         <div className="hero-container">
           <div className="hero-text">
             <div className="hero-title">
-              <h1 className="main-title">Jade</h1>
-              <h1 className="sub-title">Kickstarter Program</h1>
-            </div>
-            <div className="hero-desc">
-              <p className="hero-desc-item">
-                Keep track of your team's progress
-              </p>
+              <h1 className="sub-title">Jade helps you create</h1>
+              <h1 className="sub-title">groups efficiently</h1>
             </div>
             <div className="btn-container">
-              <Link to="/signup">
+              <Link to="/signup1">
                 <button className="BTNsignUp"> Join now </button>
               </Link>
+
+              {/*  <Link to="/login">
+                <button className="BTNlogIn"> Log In </button>
+              </Link> */}
             </div>
           </div>
           <div className="hero-img">
@@ -66,7 +65,7 @@ function LandingRevise() {
         </div>
       </div>
 
-      <Connect />
+     {/* <Connect /> */}
       <Progress />
       {/* <Career /> */}
       <Footer />
