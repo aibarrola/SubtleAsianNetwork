@@ -9,9 +9,10 @@ function Footer() {
   return (
     <div className="footer">
       <div className="footer-container">
+        {/*  <img src={Logo} className="footerLogo" alt="Footer Logo"/> */}
 
-        <h1 className="footerTitle"> Kickstart your career now </h1>
-        <Link to="/signup">
+        <h1 className="footerTitle"> Choose your groups now </h1>
+        <Link to="/signup1">
           <button className="BTNsignUp footerBTN"> Join now </button>
         </Link>
       </div>
