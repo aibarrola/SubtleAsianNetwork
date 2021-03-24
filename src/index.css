@@ -31,21 +31,16 @@
 
   /*Redesign Colors */
   --main-color: #56CEA8;
-  --main-color-hover: #4bad8e;
+  --main-color-hover: #44ff98;
   --accent-color: #16eb76;
   --main-white: #ffffff;
   --main-grey: #F4F6FA;
   --secondary-grey: #546a7b;
-  --main-dark: #0f0a0a; 
+  --main-dark: #0f0a0a;
   --light-grey: #f8f4f4;
   --inactive-grey: #959595;
   --inactive-light-grey: #f4f4f4;
-  
-  --background-grey: #F4F6FA;
-  --border-grey: #CACDD3;
-
-  --field-border-grey: #CACDD3;
-  --field-placeholder-grey: #E1E2E4;
+  --black: #2b2b2b;
 }
 
 .flex-column {
