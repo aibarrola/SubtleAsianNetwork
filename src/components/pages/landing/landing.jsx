@@ -50,7 +50,7 @@ function LandingRevise() {
               <h1 className="sub-title">groups efficiently</h1>
             </div>
             <div className="btn-container">
-              <Link to="/signup1">
+              <Link to="/signup">
                 <button className="BTNsignUp"> Join now </button>
               </Link>
 
