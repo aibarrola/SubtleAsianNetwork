@@ -12,7 +12,7 @@ function Footer() {
         {/*  <img src={Logo} className="footerLogo" alt="Footer Logo"/> */}
 
         <h1 className="footerTitle"> Choose your groups now </h1>
-        <Link to="/signup1">
+        <Link to="/signup">
           <button className="BTNsignUp footerBTN"> Join now </button>
         </Link>
       </div>
