@@ -120,7 +120,7 @@
 }
 
 .signUp-form-name-field {
-  border: 1px solid var(--field-border-grey);
+  border: 1px solid var(--border-grey);
   border-radius: 5px;
   width: 48%; 
   height: 30px;
@@ -134,7 +134,7 @@
 
 /* Email Field Section */
 .signUp-form-field {
-  border: 1px solid var(--field-border-grey);
+  border: 1px solid var(--border-grey);
   border-radius: 5px;
   width: 100%;
   height: 30px;
