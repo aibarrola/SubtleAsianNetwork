@@ -20,6 +20,7 @@ import ReactGA from 'react-ga';
 import Aboutpage from "./components/pages/aboutPage/about";
 import SignUp from './components/pages/signup/signUp';
 import CreateCohort from './components/pages/cohort/createCohort';
+import Match from './components/pages/matching/match';
 
 
 function App() {
@@ -69,6 +70,9 @@ function App() {
         </Route>
         <Route path="/about">
           <Aboutpage />
+        </Route>
+        <Route path="/match">
+          <Match />
         </Route>
       </Switch>
     </Router>
