@@ -1,0 +1,30 @@
+.Match {
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-around;
+    padding-right: 7px;
+   
+}
+
+.Match .row {
+    width: 80%;
+    
+
+}
+
+.droppable-row {
+    width: 100%;
+    height: 200px;
+    background-color: gray;
+    padding: 10px;
+    border-radius:7px;
+}
+
+.item {
+    margin-bottom: 10px;
+    color:white;
+    border:1px solid white;
+    padding:5px;
+    border-radius:7px;
+}
