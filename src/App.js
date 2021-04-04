@@ -21,7 +21,7 @@ import Aboutpage from "./components/pages/aboutPage/about";
 import SignUp from './components/pages/signup/signUp';
 import CreateCohort from './components/pages/cohort/createCohort';
 import Match from './components/pages/matching/match';
-
+import FormPage from './components/pages/formPage/formPage';
 
 function App() {
   useEffect(() => {
@@ -73,6 +73,9 @@ function App() {
         </Route>
         <Route path="/match">
           <Match />
+        </Route>
+        <Route path="/form">
+          <FormPage/>
         </Route>
       </Switch>
     </Router>
