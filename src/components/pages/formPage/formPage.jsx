@@ -1,11 +1,11 @@
 import React from 'react';
-import Checkboxes from './Checkboxes';
-import MultipleChoice from './multipleChoice/multipleChoice';
+
+import Question from "./question/Question";
 export default function formPage(){
     return(
         <div>
-            <Checkboxes />
-            <MultipleChoice />
+            <Question /> 
+            <Question />
         </div>
     )
 }

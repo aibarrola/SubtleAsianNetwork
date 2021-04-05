@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {AiFillCloseCircle} from 'react-icons/ai'
 import './multipleChoice.css';
 
-export default function MultipleChoice(){
+export default function MultipleChoice(props){
     const [questions, setQuestions] = useState(['Option 0','Option 1'])
     // index to keep track of which questions user is clicking
     const [index, setIndex] = useState(0)
@@ -27,7 +27,6 @@ export default function MultipleChoice(){
     }
     return(
         <div>
-            <h1>Hi</h1>
             <div className="column-flex-container">
             {
                 
@@ -38,8 +37,8 @@ export default function MultipleChoice(){
                     >
                         <input 
                             name = 'answerGroup' 
-                            type ="radio" 
-                            value={question}
+                            type = {props.type}
+                            value= {question}
                         />
                         <input
                             value = {question.charAt(0).toUpperCase() + question.slice(1)}

@@ -1,0 +1,12 @@
+.row-flex-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.column-flex-container{
+    display: flex;
+    flex-direction: column;
+    
+}
