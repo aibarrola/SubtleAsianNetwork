@@ -8,29 +8,28 @@ import { propTypes } from 'react-bootstrap/esm/Image';
 import { Button } from 'react-bootstrap';
 
 export default function Question(props){
-    const [questionType, setQuestionType] = useState(props.question);
+    const [questionType, setQuestionType] = useState('checkbox');
 
     function changeQuestionType(type){
         setQuestionType(type)
     }
 
     return(
-        <div className = "row-flex-container">
-            <div>
-                <AiFillDelete/>
-            </div>
-            <div className="row-flex-container">
+        <div>
+            <div className = "row-flex-container">
+                <AiFillDelete onClick={() => {props.onDelete(props.index)}}/>
                 <input type = "text"/>
                 <DropdownButton id="dropdown-basic-button" title={questionType}>
-                    <div className="column-flex-container">
-                    <Dropdown.Item value = "checkbox" onClick = {() => {changeQuestionType('checkbox')}}>Checkboxes</Dropdown.Item>
-                    <Dropdown.Item value = "radio" onClick = {() => {changeQuestionType('radio')}}>RadioGroup</Dropdown.Item>
-                    <Dropdown.Item onClick = {() => {changeQuestionType('shortAnswer')}}>Short answer</Dropdown.Item>
-                    
-                    </div>
+                        <div className="column-flex-container">
+                        <Dropdown.Item value = "checkbox" onClick = {() => {changeQuestionType('checkbox')}}>Checkboxes</Dropdown.Item>
+                        <Dropdown.Item value = "radio" onClick = {() => {changeQuestionType('radio')}}>RadioGroup</Dropdown.Item>
+                        <Dropdown.Item onClick = {() => {changeQuestionType('shortAnswer')}}>Short answer</Dropdown.Item>
+                        
+                        </div>
                 </DropdownButton>
             </div>
-            <div>
+            {/* answers that display differently depends on question type*/}
+            <div className="answers">
                 {
                     (questionType==='checkbox' || questionType==='radio') && <MultipleChoice type={questionType}/>
                 }
