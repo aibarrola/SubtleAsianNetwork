@@ -1,11 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import Question from "./question/Question";
-export default function formPage(){
+export default function FormPage(){
+    const [questions, setQuestions] = useState(['checkbox','checkbox'])
     return(
         <div>
-            <Question /> 
-            <Question />
+            {
+                questions.map(question => 
+                    <Question question = {question}/>
+                )
+            }
         </div>
     )
 }
