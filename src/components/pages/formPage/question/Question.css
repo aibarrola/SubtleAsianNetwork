@@ -10,3 +10,11 @@
     flex-direction: column;
     width: 100%;
 }
+
+#dropdown-basic-button{
+    margin-left: 15px;
+}
+
+.question{
+    margin-top: 10px;
+}

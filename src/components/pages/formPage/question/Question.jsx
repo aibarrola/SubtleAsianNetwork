@@ -4,8 +4,7 @@ import './Question.css'
 import DropdownButton from 'react-bootstrap/DropdownButton'
 import Dropdown from 'react-bootstrap/Dropdown'
 import {AiFillDelete} from 'react-icons/ai'
-import { propTypes } from 'react-bootstrap/esm/Image';
-import { Button } from 'react-bootstrap';
+
 
 export default function Question(props){
     const [questionType, setQuestionType] = useState('checkbox');
@@ -15,7 +14,7 @@ export default function Question(props){
     }
 
     return(
-        <div>
+        <div className="question">
             <div className = "row-flex-container">
                 <AiFillDelete onClick={() => {props.onDelete(props.index)}}/>
                 <input type = "text"/>
