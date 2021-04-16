@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import { Button } from 'react-bootstrap';
+import { AiFillPlusCircle } from 'react-icons/ai';
 import {v4 as uuidv4} from 'uuid';
+import './formPage.css'
 
 import Question from "./question/Question";
 export default function FormPage(){
@@ -31,7 +33,7 @@ export default function FormPage(){
                     <Question index = {questions.indexOf(id)} onDelete={deleteQuestion}/>
                 )
             }
-            <Button onClick={addQuestion}>Add questions</Button>
+            <AiFillPlusCircle className="green-bg" onClick = {addQuestion} />
         </div>
     )
 }
