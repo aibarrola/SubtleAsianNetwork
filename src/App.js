@@ -11,6 +11,7 @@ import Profile from "./components/pages/Profile/profile";
 import CreateProfilePage1 from "./components/pages/createProfile/createProfilePage1";
 import Networking from "./components/pages/Networking/networking";
 import CreateProfilePage2 from "./components/pages/createProfile/createProfilePage2";
+import SignUpMem from "./components/pages/signup/signUpMem"
 import LogIn from "./components/pages/login/login";
 import EditProfile from "./components/pages/editProfile/editProfile";
 import GroupPage from "./components/pages/groupPage/groupPage";
@@ -55,6 +56,9 @@ function App() {
         </Route>
         <Route path="/user/:id/cp/2">
           <CreateProfilePage2 />
+          </Route>
+          <Route path="/memSign">
+          <SignUpMem />
         </Route>
         <Route path="/editProfile">
           <EditProfile />
