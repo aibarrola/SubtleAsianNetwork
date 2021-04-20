@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Axios from 'axios';
 import {useParams} from 'react-router-dom';
 import './createCohort.css';
-
+import './accordion.css'
 // Helpers
 import { getJwt } from "../../Helpers/jwt";
 
@@ -62,7 +62,24 @@ function CreateCohort() {
       })
   }
 
+
+  function hideBoxes(id) {
+    if (document.getElementById(id).checked) {
+      var i;
+      for (i = 0; i<5; i++){
+        if (i != id) {
+          document.getElementById(i).checked=false;
+        }
+    }
+  }
+  }
+  
+  function closeBox() {
+    document.getElementById(id).style.display = "none";
+  }
+
   return (
+    <div>
     <div className="createCohort">
       <div className="createCohort-container">
         <div className="createCohort-title-container">
@@ -96,6 +113,65 @@ function CreateCohort() {
           </div>
         </form>
       </div>
+    </div>
+    
+      {/* Accordion */}
+    <section class="container" id="container">
+  <div class="ac">
+    
+    <input class="ac-input" id="top" name="top" type="checkbox" />
+    <label class="ac-label" for="top">Getting Started Guide</label>
+    
+    <article class="ac-text">
+      
+      <div class="ac-sub">
+        <input class="ac-input" id="0" name="0" type="checkbox" onclick={() => hideBoxes()}/>
+        <label class="ac-label" for="0">Create new group</label>
+        <article class="ac-sub-text">
+  <p>Start by clicking <i>Create</i> on the top right. Name your group and you also can put your company/school and organization name
+  </p>
+        </article>
+      </div>
+      
+      <div class="ac-sub">
+        <input class="ac-input" id="1" name="1" type="checkbox" onclick={() => hideBoxes()}/>
+        <label class="ac-label" for="1">Create a form</label>
+        <article class="ac-sub-text">
+          <p>Add any questions you'd like. Ranging from multiple choice to short answer. Customize the options for each question.</p>
+        </article>
+      </div>
+  
+      <div class="ac-sub">
+      <input class="ac-input" id="2" name="2" type="checkbox" onclick={() => hideBoxes()}/>
+        <label class="ac-label" for="2">Invite members</label>
+        <article class="ac-sub-text">
+      <p>sadfasdfads</p>
+  </article>
+    </div>
+  
+    <div class="ac-sub">
+      <input class="ac-input" id="3" name="3" type="checkbox" onclick={() => hideBoxes()}/>
+        <label class="ac-label" for="3">Arrange groups</label>
+        <article class="ac-sub-text">
+      <p>sadfasdfads</p>
+  </article>
+    </div>
+  
+    <div class="ac-sub">
+      <input class="ac-input" id="4" name="4" type="checkbox" onclick={() => hideBoxes()}/>
+        <label class="ac-label" for="4">Notify members</label>
+        <article class="ac-sub-text">
+      <p>sadfasdfads</p>
+  </article>
+    </div>
+    <div class="ac">
+      <input class="ac-input" id="close" name="close" type="checkbox" onclick={closeBox}/>
+        <label class="ac-label" for="close">Got it. Don't show again.</label>
+    </div>
+    </article>
+    
+  </div> 
+  </section>
     </div>
   )
 }
